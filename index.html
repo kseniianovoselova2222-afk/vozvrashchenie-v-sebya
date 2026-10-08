@@ -7,7 +7,7 @@
 <meta name="description" content="Неделя практики кундалини-йоги с Ксенией Новосёловой. Старт 9 ноября, в новолуние. Каждый день практика 25-30 минут и общий чат. 2 990 ₽">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Возвращение в себя. 7 дней кундалини-йоги">
-<meta property="og:description" content="Старт 9 ноября, в новолуние. Каждый день практика 25-30 минут и общий чат с Ксенией. Запись до 3 ноября">
+<meta property="og:description" content="Старт 9 ноября, в новолуние. Каждый день практика 25-30 минут и общий чат с Ксенией. Запись до 8 ноября">
 <meta property="og:image" content="https://kseniianovoselova2222-afk.github.io/vozvrashchenie-v-sebya/og.jpg">
 <meta name="theme-color" content="#1f1626">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%231f1626'/%3E%3Cpath d='M24 4A20 20 0 0 1 24 44A13 20 0 0 0 24 4Z' fill='%23e8cf9f'/%3E%3C/svg%3E">
@@ -56,7 +56,7 @@ p{text-wrap:pretty}
 .date-chip{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--moon);border:1px solid rgba(216,181,122,.35);border-radius:99px;padding:8px 16px;background:rgba(255,255,255,.03);backdrop-filter:blur(4px)}
 .date-chip b{font-weight:500}
 .hero h1{font-size:clamp(40px,10.5vw,78px);margin:18px 0 0;letter-spacing:-.01em}
-.hero h1 span{display:block;font-size:.5em;color:var(--moon);margin-top:10px;letter-spacing:0}
+.hero h1 .sub{display:block;font-size:.5em;color:var(--moon);margin-top:10px;letter-spacing:0}
 .lead{font-size:18px;color:#e6dbe4;margin:22px 0 0;max-width:34rem}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:30px 0 0;border:1px solid rgba(216,181,122,.25);border-radius:var(--r);overflow:hidden;background:rgba(216,181,122,.25)}
 .facts div{background:rgba(29,21,36,.72);padding:14px 10px;text-align:center}
@@ -174,6 +174,56 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 .load.d1{animation-delay:.12s}.load.d2{animation-delay:.24s}.load.d3{animation-delay:.36s}.load.d4{animation-delay:.48s}
 @keyframes up{from{opacity:0;transform:translateY(16px)}}
 
+
+/* ---------- мягкие анимации ---------- */
+.moon-par{width:100%;height:100%;will-change:transform}
+.moon-big.load{animation:rise 1.9s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(46px) scale(.94)}}
+.cres{animation:born 2.6s .5s ease-out both}
+.cres-glow{animation:born 2.6s .5s ease-out both,glowp 6s 3.2s ease-in-out infinite}
+@keyframes born{from{opacity:0}}
+@keyframes glowp{50%{opacity:.3}}
+.hero h1 .w{display:inline-block;animation:wordup 1.3s .25s var(--ease) both}
+.hero h1 .w2{animation-delay:.5s}
+.hero h1 .sub{animation:wordup 1.3s .8s var(--ease) both}
+@keyframes wordup{from{opacity:0;transform:translateY(.35em)}}
+.js .rv .eyebrow-num::after{transform:scaleX(0);transform-origin:left;transition:transform 1.1s .35s var(--ease)}
+.js .rv.in .eyebrow-num::after{transform:none}
+.js .moons path{opacity:0;transform:scale(.8);transform-box:fill-box;transform-origin:center}
+.js .moons.in path{animation:lit .9s var(--ease) forwards}
+.js .moons figcaption{transition:color .6s}
+.js .moons.in figcaption{color:var(--gold-deep)}
+@keyframes lit{to{opacity:1;transform:none}}
+.cards .card:nth-child(even){transition-delay:.1s}
+.js .safe-list li,.js .steps li{opacity:0;transform:translateY(10px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .in .safe-list li,.js .in .steps li{opacity:1;transform:none}
+.js .steps li::after{transform:scaleY(0);transform-origin:top;transition:transform .9s var(--ease)}
+.js .in .steps li::after{transform:none}
+.btn-moon{position:relative;overflow:hidden;isolation:isolate}
+.btn-moon::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 6s 2.8s ease-in-out infinite}
+@keyframes shine{0%,72%{transform:skewX(-20deg) translateX(0)}100%{transform:skewX(-20deg) translateX(430%)}}
+.faq details[open] p{animation:faqin .5s var(--ease)}
+@keyframes faqin{from{opacity:0;transform:translateY(-6px)}}
+.final .moon-sm{animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-7px)}}
+.price-card::before{animation:drift 12s ease-in-out infinite}
+@keyframes drift{50%{transform:translate(-34px,24px)}}
+.js .moons.in figure:nth-child(2) path{animation-delay:0.16s}
+.js .moons.in figure:nth-child(3) path{animation-delay:0.32s}
+.js .moons.in figure:nth-child(4) path{animation-delay:0.48s}
+.js .moons.in figure:nth-child(5) path{animation-delay:0.64s}
+.js .moons.in figure:nth-child(6) path{animation-delay:0.80s}
+.js .moons.in figure:nth-child(7) path{animation-delay:0.96s}
+.js .safe-list li:nth-child(2),.js .steps li:nth-child(2){transition-delay:0.09s}
+.js .safe-list li:nth-child(3),.js .steps li:nth-child(3){transition-delay:0.18s}
+.js .safe-list li:nth-child(4),.js .steps li:nth-child(4){transition-delay:0.27s}
+.js .safe-list li:nth-child(5),.js .steps li:nth-child(5){transition-delay:0.36s}
+.js .safe-list li:nth-child(6),.js .steps li:nth-child(6){transition-delay:0.45s}
+.js .safe-list li:nth-child(7),.js .steps li:nth-child(7){transition-delay:0.54s}
+.js .steps li:nth-child(2)::after{transition-delay:0.24s}
+.js .steps li:nth-child(3)::after{transition-delay:0.36s}
+.js .steps li:nth-child(4)::after{transition-delay:0.48s}
+
 @media (min-width:760px){
   body{font-size:18px}
   .wrap{padding:0 40px}
@@ -193,6 +243,9 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .rv{opacity:1;transform:none}
+  .js .moons path,.js .safe-list li,.js .steps li{opacity:1;transform:none}
+  .js .rv .eyebrow-num::after,.js .steps li::after{transform:none}
+  .btn-moon::after{display:none}
 }
 </style>
 </head>
@@ -207,7 +260,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
     </div>
 
     <div class="hero-grid">
-      <div class="moon-big load d1" aria-hidden="true">
+      <div class="moon-big load d1" aria-hidden="true"><div class="moon-par" id="moonPar">
         <div class="halo"></div>
         <svg viewBox="0 0 200 200">
           <defs>
@@ -217,19 +270,19 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
           </defs>
           <circle cx="100" cy="100" r="80" fill="url(#dark)"/>
           <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(239,220,180,.18)" stroke-width="1"/>
-          <path d="M100 20A80 80 0 0 1 100 180A74 80 0 0 0 100 20Z" fill="url(#lit)" filter="url(#glow)" opacity=".9"/>
-          <path d="M100 20A80 80 0 0 1 100 180A74 80 0 0 0 100 20Z" fill="url(#lit)"/>
+          <path d="M100 20A80 80 0 0 1 100 180A74 80 0 0 0 100 20Z" fill="url(#lit)" filter="url(#glow)" opacity=".9" class="cres-glow"/>
+          <path d="M100 20A80 80 0 0 1 100 180A74 80 0 0 0 100 20Z" fill="url(#lit)" class="cres"/>
         </svg>
-      </div>
+      </div></div>
 
       <div>
         <div class="date-chip load d2"><b>9&nbsp;ноября</b> · новолуние</div>
-        <h1 class="load d2">Возвращение в&nbsp;себя<span>7&nbsp;дней кундалини-йоги</span></h1>
-        <p class="lead load d3">Неделя практики со&nbsp;мной, Ксенией Новосёловой. Старт 9&nbsp;ноября, в&nbsp;новолуние. Каждый день одна практика 25-30&nbsp;минут и&nbsp;общий чат, где я&nbsp;рядом все семь дней. Запись до&nbsp;3&nbsp;ноября, участие 2&nbsp;990&nbsp;₽</p>
+        <h1><span class="w">Возвращение</span> <span class="w w2">в&nbsp;себя</span><span class="sub">7&nbsp;дней кундалини-йоги</span></h1>
+        <p class="lead load d3">Неделя практики со&nbsp;мной, Ксенией Новосёловой. Старт 9&nbsp;ноября, в&nbsp;новолуние. Каждый день одна практика 25-30&nbsp;минут и&nbsp;общий чат, где я&nbsp;рядом все семь дней. Запись до&nbsp;8&nbsp;ноября, участие 2&nbsp;990&nbsp;₽</p>
         <div class="facts load d3">
           <div><strong>7&nbsp;дней</strong><small>9-15&nbsp;ноября</small></div>
           <div><strong>25-30&nbsp;мин</strong><small>в&nbsp;день</small></div>
-          <div><strong>2&nbsp;990&nbsp;₽</strong><small>запись до&nbsp;3.11</small></div>
+          <div><strong>2&nbsp;990&nbsp;₽</strong><small>запись до&nbsp;8.11</small></div>
         </div>
         <div class="cta-row load d4">
           <a class="btn btn-moon" href="https://t.me/ksenia_yoginy">Хочу в&nbsp;поток
@@ -339,7 +392,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
     <div class="price-card rv">
       <div class="price">2&nbsp;990&nbsp;₽<small>за&nbsp;всю неделю. Оплата переводом на&nbsp;карту, чек самозанятой приходит из&nbsp;«Мой налог»</small></div>
       <ul class="dates">
-        <li>Запись до&nbsp;3&nbsp;ноября</li>
+        <li>Запись до&nbsp;8&nbsp;ноября</li>
         <li>Старт 9&nbsp;ноября, в&nbsp;новолуние. Поток идёт с&nbsp;9&nbsp;по&nbsp;15&nbsp;ноября</li>
         <li>Записи и&nbsp;чат открываются в&nbsp;день старта. Практику делаешь в&nbsp;своё время, лучше в&nbsp;одно и&nbsp;то&nbsp;же&nbsp;каждый день</li>
         <li>Никаких таймеров и&nbsp;«только сегодня», решаешь спокойно</li>
@@ -390,7 +443,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
   <div class="wrap">
     <svg class="moon-sm" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#2c1f35" stroke="rgba(239,220,180,.25)"/><path d="M24 4A20 20 0 0 1 24 44A18.2 20 0 0 0 24 4Z" fill="#efdcb4"/></svg>
     <h2>9&nbsp;ноября, новолуние</h2>
-    <p>Запись до&nbsp;3&nbsp;ноября, участие 2&nbsp;990&nbsp;₽</p>
+    <p>Запись до&nbsp;8&nbsp;ноября, участие 2&nbsp;990&nbsp;₽</p>
     <a class="btn btn-moon" href="https://t.me/ksenia_yoginy">Хочу в&nbsp;поток
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
@@ -424,7 +477,9 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
   } else els.forEach(function(e){e.classList.add('in')});
   var st=document.getElementById('sticky'),hero=document.querySelector('.hero'),fin=document.querySelector('.final');
   function upd(){var y=window.scrollY,h=hero.offsetHeight,f=fin.getBoundingClientRect().top;st.classList.toggle('on',y>h*.8&&f>window.innerHeight)}
-  window.addEventListener('scroll',upd,{passive:true});upd();
+  var mp=document.getElementById('moonPar'),calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,tick=false;
+  function par(){tick=false;var y=window.scrollY;if(y<hero.offsetHeight)mp.style.transform='translate3d(0,'+(y*.22).toFixed(1)+'px,0)'}
+  window.addEventListener('scroll',function(){upd();if(!calm&&!tick){tick=true;requestAnimationFrame(par)}},{passive:true});upd();
 })();
 </script>
 </body>
