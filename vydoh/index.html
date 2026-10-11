@@ -274,7 +274,7 @@ footer a{color:var(--moon)}
 </section>
 
 <!-- ШАГ 2. ГДЕ ДЕРЖИТСЯ ОБОРОНА -->
-<section class="band">
+<section class="band" id="zony">
   <div class="wrap">
     <div class="eyebrow">Шаг 2 · 30 секунд</div>
     <h2>Где у тебя держится оборона</h2>
@@ -370,7 +370,7 @@ footer a{color:var(--moon)}
       <article class="item" data-n="3" id="m3">
         <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 3</div><h3>Свет в первый час</h3></div><span class="dur">2 минуты</span></div>
         <div class="ibody">
-          <p><b>Как.</b> Проснулась, подойди к окну или выйди на балкон. Две минуты побудь на дневном свете, без тёмных очков и без телефона в руках</p>
+          <p><b>Как.</b> Проснулась, подойди к окну или выйди на балкон. Две минуты побудь на дневном свете, без тёмных очков и без телефона в руках. Если за окном ещё темно, а зимой так бывает часто, возьми эти две минуты при первом выходе из дома</p>
           <p><b>Почему.</b> Утренний свет подводит внутренние часы, и вечером спать хочется раньше. Учёные видели это даже пасмурной зимой в Сиэтле: на улице всё равно заметно светлее, чем дома под лампой</p>
           <p class="fine"><b>Тонкость.</b> Если можно, открой окно или выйди на улицу. На солнце не смотри, просто побудь на свету</p>
         </div>
@@ -427,14 +427,14 @@ footer a{color:var(--moon)}
 </section>
 
 <!-- УТРО И ВЕЧЕР -->
-<section class="band" style="padding-top:0">
+<section class="band" style="padding-top:0" id="utro-vecher">
   <div class="wrap">
     <hr class="hair" style="margin-bottom:56px">
     <div class="eyebrow">Готовые связки</div>
     <h2>Утро и вечер</h2>
     <div class="duo">
       <div class="plan"><div class="len">3 минуты</div><h3>Утро</h3>
-        <ol><li><span>Свет у окна</span><span>2 мин</span></li><li><span>Там же выдох длиннее вдоха</span><span>36 с</span></li><li><span>Выбери одно «нет» на сегодня</span><span>20 с</span></li></ol></div>
+        <ol><li><span>Свет у окна или по дороге</span><span>2 мин</span></li><li><span>Там же выдох длиннее вдоха</span><span>36 с</span></li><li><span>Выбери одно «нет» на сегодня</span><span>20 с</span></li></ol></div>
       <div class="plan"><div class="len">около 5 минут</div><h3>Вечер</h3>
         <ol><li><span>Чай вдвое медленнее</span><span>2 мин</span></li><li><span>Гудение</span><span>30 с</span></li><li><span>Ладони на сердце и живот</span><span>20 с</span></li><li><span>Выдох длиннее вдоха</span><span>36 с</span></li><li><span>В постели последняя минута</span><span>1 мин</span></li></ol></div>
     </div>
@@ -565,15 +565,17 @@ footer a{color:var(--moon)}
   D.querySelectorAll('.item').forEach(function(it){var n=+it.dataset.n;it.querySelector('.ph').innerHTML='<svg viewBox="0 0 100 100">'+moonSVG(n/8,'i'+n)+'</svg>';});
 
   /* звёзды на обложке */
-  var cv=$('sky'),cx=cv.getContext('2d'),st=[],W,H,dpr=Math.min(devicePixelRatio||1,2),shoot=null;
+  var cv=$('sky'),cx=cv.getContext('2d'),st=[],W,H,dpr=Math.min(devicePixelRatio||1,2),shoot=null,vis=true,ticking=false;
   function size(){W=cv.width=cv.offsetWidth*dpr;H=cv.height=cv.offsetHeight*dpr;st=[];var n=Math.round(W*H/(dpr*dpr*5200));
     for(var i=0;i<n;i++)st.push({x:Math.random()*W,y:Math.random()*H*.85,r:(Math.random()*1.3+.3)*dpr,a:Math.random()*6,s:Math.random()*.03+.008});}
-  function draw(){cx.clearRect(0,0,W,H);
+  function draw(){ticking=false;cx.clearRect(0,0,W,H);
     for(var i=0;i<st.length;i++){var s=st[i];s.a+=s.s;cx.globalAlpha=.3+Math.abs(Math.sin(s.a))*.7;cx.fillStyle='#efdcb4';cx.beginPath();cx.arc(s.x,s.y,s.r,0,7);cx.fill();}
     if(!shoot&&Math.random()<.006)shoot={x:Math.random()*W*.7+W*.2,y:Math.random()*H*.35,l:0};
     if(shoot){shoot.l+=14*dpr;var x=shoot.x-shoot.l,y=shoot.y+shoot.l*.45,g=cx.createLinearGradient(x,y,x+90*dpr,y-40*dpr);g.addColorStop(0,'rgba(255,243,217,.95)');g.addColorStop(1,'rgba(255,243,217,0)');cx.globalAlpha=1;cx.strokeStyle=g;cx.lineWidth=1.6*dpr;cx.beginPath();cx.moveTo(x,y);cx.lineTo(x+90*dpr,y-40*dpr);cx.stroke();if(shoot.l>W*.5)shoot=null;}
-    cx.globalAlpha=1;if(!RM)requestAnimationFrame(draw);}
+    cx.globalAlpha=1;wake();}
+  function wake(){if(!RM&&vis&&!ticking){ticking=true;requestAnimationFrame(draw);}}
   size();draw();addEventListener('resize',size);
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;wake();}).observe(cv);
 
   /* карточки выезжают при прокрутке, видимы и без анимации */
   if('IntersectionObserver' in window&&!RM){
@@ -621,7 +623,7 @@ footer a{color:var(--moon)}
       $('arc').style.strokeDashoffset=(C*(1-left/dur)).toFixed(1);
       if(left<=0){clearInterval(timer);stopB&&stopB();stopB=null;if(i<3)run(i+1);else finish();}},200);}
   function finish(){$('pStep').textContent='Готово';$('pTitle').textContent='Как ты сейчас?';$('pText').textContent='Оцени напряжение ещё раз, тем же способом, что в начале';
-    show($('ring'),false);show($('stop'),false);show($('after'),true);compare1();}
+    show($('ring'),false);show($('stop'),false);show($('after'),true);$('result').textContent='Сдвинь шкалу и сравни с началом';}
   function start(){show($('go'),false);show($('player'),true);show($('ring'),true);show($('stop'),true);show($('after'),false);$('arc').style.strokeDashoffset=0;run(0);
     $('player').scrollIntoView({behavior:RM?'auto':'smooth',block:'center'});}
   $('go').addEventListener('click',start);$('again').addEventListener('click',start);
