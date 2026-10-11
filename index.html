@@ -13,15 +13,15 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%231f1626'/%3E%3Cpath d='M24 4A20 20 0 0 1 24 44A13 20 0 0 0 24 4Z' fill='%23e8cf9f'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,72,500;1,72,400&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --night:#1d1524; --night-2:#2c1f35; --night-3:#3d2b45;
-  --moon:#efdcb4; --gold:#d8b57a; --gold-deep:#8a6a3a;
-  --paper:#f8f2ec; --paper-2:#f1e6dc; --blush:#ecd6cd; --blush-2:#e3c3b8;
+  --moon:#efdcb4; --gold:#d8b57a; --gold-deep:#7a5a2c;
+  --paper:#f6edeb; --paper-2:#efe3e0; --blush:#ecd6cd; --blush-2:#e3c3b8;
   --ink:#2a1f2e; --ink-soft:#5e4f62; --line:#e2d3c8;
-  --plum:#4a2c4f; --rose:#9b4d5c;
-  --serif:"Prata", Georgia, "Times New Roman", serif;
+  --plum:#4a2c4f; --rose:#9b4d5c; --rose-press:#86404e; --card:#fffbfa;
+  --serif:"Literata", Georgia, "Times New Roman", serif;
   --sans:"Golos Text", -apple-system, "Segoe UI", system-ui, sans-serif;
   --ease:cubic-bezier(.23,1,.32,1);
   --r:22px;
@@ -30,7 +30,8 @@
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.18;text-wrap:balance}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.18;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:500;line-height:1.3}
 p{text-wrap:pretty}
 .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
 .measure{max-width:38rem}
@@ -58,12 +59,12 @@ p{text-wrap:pretty}
 .hero h1{font-size:clamp(40px,10.5vw,78px);margin:18px 0 0;letter-spacing:-.01em}
 .hero h1 .sub{display:block;font-size:.5em;color:var(--moon);margin-top:10px;letter-spacing:0}
 .lead{font-size:18px;color:#e6dbe4;margin:22px 0 0;max-width:34rem}
-.promise{font-family:var(--serif);font-size:clamp(23px,6vw,32px);line-height:1.28;color:#fff6e6;margin:26px 0 0;max-width:32rem;text-wrap:balance}
+.promise{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(23px,6vw,32px);line-height:1.28;color:#fff6e6;margin:26px 0 0;max-width:32rem;text-wrap:balance}
 .promise+.lead{margin-top:14px}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:30px 0 0;border:1px solid rgba(216,181,122,.25);border-radius:var(--r);overflow:hidden;background:rgba(216,181,122,.25)}
 .facts div{background:rgba(29,21,36,.72);padding:14px 10px;text-align:center}
-.facts strong{display:block;white-space:nowrap;font-family:var(--serif);font-weight:400;font-size:clamp(17px,4.7vw,26px);color:var(--moon);line-height:1.2}
-.facts small{display:block;font-size:12px;color:#bfb1c2;margin-top:4px;line-height:1.35}
+.facts strong{display:block;white-space:nowrap;font-family:var(--sans);font-weight:600;font-variant-numeric:tabular-nums;font-size:clamp(16px,4.4vw,24px);color:var(--moon);line-height:1.2}
+.facts small{display:block;font-size:14px;color:#bfb1c2;margin-top:4px;line-height:1.35}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin:28px 0 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:99px;font:500 17px/1 var(--sans);text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
 .btn:active{transform:scale(.97)}
@@ -71,6 +72,10 @@ p{text-wrap:pretty}
 .btn-moon:hover{box-shadow:0 14px 38px -10px rgba(232,200,140,.85),inset 0 1px 0 rgba(255,255,255,.6)}
 .btn-plum{background:var(--plum);color:var(--paper);box-shadow:0 12px 30px -14px rgba(74,44,79,.8)}
 .btn-plum:hover{background:#5a3660}
+.btn-rose{background:var(--rose);color:#fff;box-shadow:0 12px 30px -14px rgba(155,77,92,.9)}
+.btn-rose:hover,.btn-rose:active{background:var(--rose-press)}
+.btn-line{background:transparent;color:var(--moon);box-shadow:inset 0 0 0 1.5px var(--gold)}
+.btn-line:hover{background:rgba(239,220,180,.08)}
 .btn svg{width:20px;height:20px;flex:none}
 .cta-note{font-size:14px;color:#bfb1c2}
 .cta-note a{color:var(--moon)}
@@ -78,29 +83,29 @@ p{text-wrap:pretty}
 
 /* ---------- светлая часть ---------- */
 section{padding:72px 0}
-.eyebrow-num{font-family:var(--serif);font-size:15px;color:var(--gold-deep);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.eyebrow-num{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.06em;color:var(--plum);display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .eyebrow-num::after{content:"";height:1px;width:48px;background:var(--gold)}
 h2{font-size:clamp(30px,7.6vw,46px);margin-bottom:24px;color:var(--ink)}
 .prose p+p{margin-top:16px}
-.prose .big{font-family:var(--serif);font-size:clamp(23px,5.8vw,30px);line-height:1.35;color:var(--plum)}
+.prose .big{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(23px,5.8vw,30px);line-height:1.35;color:var(--plum)}
 .prose .accent{font-size:19px;color:var(--ink);padding:18px 0 0 22px;border-left:2px solid var(--gold);margin-top:26px!important;padding-top:2px}
 
 /* 7 лун */
 .moons{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:6px 0 34px;max-width:520px}
 .moons figure{text-align:center}
 .moons svg{width:100%;max-width:52px;height:auto;display:block;margin:0 auto}
-.moons figcaption{font-size:12px;color:var(--ink-soft);margin-top:6px;font-variant-numeric:tabular-nums}
+.moons figcaption{font-size:14px;color:var(--ink-soft);margin-top:6px;font-variant-numeric:tabular-nums}
 .how-sub{color:var(--ink-soft);font-size:15px;margin:-10px 0 18px}
 
 .cards{display:grid;gap:14px}
-.card{background:#fffaf5;border:1px solid var(--line);border-radius:var(--r);padding:22px 22px 22px;position:relative;box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 18px 40px -34px rgba(74,44,79,.45)}
-.card .n{position:absolute;top:18px;right:20px;font-family:var(--serif);font-size:14px;color:var(--gold-deep);opacity:.8}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 22px 22px;position:relative;box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 18px 40px -34px rgba(74,44,79,.45)}
+.card .n{position:absolute;top:18px;right:20px;font-family:var(--sans);font-weight:500;font-size:14px;color:var(--gold-deep)}
 .card h3{font-size:21px;margin:0 30px 8px 0;color:var(--plum)}
 .card p{color:var(--ink-soft);font-size:16px}
-.card a{color:var(--rose);text-underline-offset:3px}
+.card a{color:var(--plum);text-underline-offset:3px}
 .variants{display:grid;gap:10px;margin-top:14px}
 .variant{border-radius:16px;padding:14px 16px;font-size:15px;color:var(--ink)}
-.variant b{display:block;font-family:var(--serif);font-weight:400;font-size:18px;margin-bottom:2px}
+.variant b{display:block;font-weight:600;font-size:17px;margin-bottom:2px}
 .variant.energy{background:linear-gradient(135deg,#f6e3c4,#f0d2b4)}
 .variant.calm{background:linear-gradient(135deg,#e5dcea,#dccfe3)}
 
@@ -109,10 +114,10 @@ h2{font-size:clamp(30px,7.6vw,46px);margin-bottom:24px;color:var(--ink)}
 .honest{margin-top:28px;background:rgba(255,255,255,.55);border-radius:var(--r);padding:22px;border:1px solid rgba(255,255,255,.7)}
 
 /* безопасность */
-.safe-box{background:#fffaf5;border:1px solid var(--line);border-radius:calc(var(--r) + 6px);padding:26px 22px;margin-top:8px}
+.safe-box{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 6px);padding:26px 22px;margin-top:8px}
 .safe-list{list-style:none;display:grid;gap:12px;margin:18px 0 22px}
 .safe-list li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;font-size:16px}
-.safe-list li::before{content:"";width:10px;height:10px;margin:8px 0 0 6px;border-radius:50%;border:1.5px solid var(--rose)}
+.safe-list li::before{content:"";width:10px;height:10px;margin:8px 0 0 6px;border-radius:50%;border:1.5px solid var(--plum)}
 .safe-box .after{color:var(--ink-soft);font-size:16px;padding-top:18px;border-top:1px dashed var(--blush-2)}
 
 /* обо мне */
@@ -120,10 +125,9 @@ h2{font-size:clamp(30px,7.6vw,46px);margin-bottom:24px;color:var(--ink)}
 .about-grid{display:grid;gap:30px;align-items:center}
 .mono{width:150px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 70% 35%,#4a3150,var(--night));color:var(--moon);font-family:var(--serif);font-size:64px;position:relative;box-shadow:0 20px 50px -24px rgba(29,21,36,.7)}
 .mono::before{content:"";position:absolute;inset:-10px;border-radius:50%;border:1px solid var(--gold);opacity:.5}
-.about .sign{font-family:var(--serif);font-size:20px;color:var(--plum);margin-top:18px}
+.about .sign{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--plum);margin-top:18px}
 
 .portrait{position:relative;width:min(68vw,250px);aspect-ratio:1}
-.portrait::before{content:"";position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(216,181,122,.7);animation:spin 50s linear infinite;border-top-color:transparent}
 .portrait::after{content:"";position:absolute;inset:-26px;border-radius:50%;background:radial-gradient(circle,rgba(216,181,122,.28),transparent 65%);z-index:-1;animation:breathe 6s ease-in-out infinite}
 .portrait img{position:relative;display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;box-shadow:0 24px 60px -24px rgba(29,21,36,.75),inset 0 0 0 1px rgba(255,255,255,.2)}
 .about-grid{isolation:isolate}
@@ -132,7 +136,7 @@ h2{font-size:clamp(30px,7.6vw,46px);margin-bottom:24px;color:var(--ink)}
 .price-card{background:linear-gradient(160deg,var(--night) 0%,var(--night-3) 100%);color:var(--paper);border-radius:calc(var(--r) + 8px);padding:30px 24px;position:relative;overflow:hidden}
 .price-card::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(239,220,180,.18),transparent 65%)}
 .price{font-family:var(--serif);font-size:clamp(52px,14vw,72px);color:var(--moon);line-height:1}
-.price small{display:block;font-family:var(--sans);font-size:15px;color:#cdbfcf;margin-top:10px}
+.price small{display:block;font-family:var(--sans);font-size:15px;line-height:1.45;color:#cdbfcf;margin-top:12px}
 .dates{list-style:none;margin:26px 0 0;display:grid;gap:0}
 .dates li{padding:14px 0;border-top:1px solid rgba(216,181,122,.2);font-size:16px;color:#e6dbe4;display:grid;grid-template-columns:24px 1fr;gap:10px}
 .dates li::before{content:"☾";color:var(--gold);font-size:15px;line-height:1.6}
@@ -140,31 +144,31 @@ h2{font-size:clamp(30px,7.6vw,46px);margin-bottom:24px;color:var(--ink)}
 /* как записаться */
 .steps{list-style:none;counter-reset:s;display:grid;gap:0;margin:8px 0 30px;position:relative}
 .steps li{counter-increment:s;position:relative;padding:0 0 26px 62px;font-size:17px;min-height:46px}
-.steps li::before{content:counter(s);position:absolute;left:0;top:-4px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:19px;color:var(--plum);background:#fffaf5;border:1px solid var(--blush-2)}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-4px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--sans);font-weight:600;font-size:17px;color:var(--plum);background:var(--card);border:1px solid var(--blush-2)}
 .steps li:not(:last-child)::after{content:"";position:absolute;left:22px;top:44px;bottom:2px;width:1px;background:linear-gradient(var(--blush-2),transparent)}
-.steps a{color:var(--rose);font-weight:500}
+.steps a{color:var(--plum);font-weight:500}
 .refund{margin-top:46px;padding:22px;border-radius:var(--r);background:var(--paper-2)}
 .refund h3{font-size:22px;margin-bottom:8px;color:var(--plum)}
 .refund p{color:var(--ink-soft);font-size:16px}
-.refund a{color:var(--rose)}
+.refund a{color:var(--plum)}
 
 /* вопросы */
 .faq details{border-bottom:1px solid var(--line)}
 .faq details:first-of-type{border-top:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;font-family:var(--serif);font-size:20px;line-height:1.3;color:var(--ink)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;font-family:var(--sans);font-weight:500;font-size:18px;line-height:1.3;color:var(--ink)}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;margin-top:-8px;border-right:1.5px solid var(--gold-deep);border-bottom:1.5px solid var(--gold-deep);transform:rotate(45deg);transition:transform .3s var(--ease)}
 .faq details[open] summary::after{transform:rotate(225deg);margin-top:-2px}
 .faq details p{padding:0 0 22px;color:var(--ink-soft);font-size:16px}
-.faq a{color:var(--rose)}
+.faq a{color:var(--plum)}
 
 /* финал и подвал */
 .final{background:linear-gradient(180deg,var(--night-2),var(--night));color:var(--paper);text-align:center;padding:76px 0 64px;position:relative;overflow:hidden}
 .final .moon-sm{width:92px;margin:0 auto 22px}
 .final h2{color:var(--paper);margin-bottom:14px}
 .final p{color:#cdbfcf;max-width:30rem;margin:0 auto 28px}
-footer{background:var(--night);color:#a898ab;font-size:13.5px;line-height:1.6;padding:8px 0 110px}
-footer .disc{font-style:italic;border-top:1px solid rgba(216,181,122,.18);padding-top:26px}
+footer{background:var(--night);color:#a898ab;font-size:14px;line-height:1.6;padding:8px 0 110px}
+footer .disc{border-top:1px solid rgba(216,181,122,.18);padding-top:26px}
 footer nav{display:flex;flex-wrap:wrap;gap:10px 18px;margin:20px 0}
 footer nav a{color:#d9cbd9;text-underline-offset:3px}
 
@@ -172,7 +176,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 .sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 20px;border-radius:99px;background:rgba(29,21,36,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--paper);box-shadow:0 16px 40px -12px rgba(29,21,36,.6);transform:translateY(140%);transition:transform .45s var(--ease)}
 .sticky.on{transform:none}
 .sticky span{font-size:14px;line-height:1.3;color:#e6dbe4}
-.sticky span b{font-family:var(--serif);font-weight:400;font-size:17px;color:var(--moon)}
+.sticky span b{font-weight:600;font-size:17px;font-variant-numeric:tabular-nums;color:var(--moon)}
 .sticky .btn{min-height:46px;padding:0 20px;font-size:15px}
 
 /* появление */
@@ -263,7 +267,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 .orb-wrap::before{content:"";position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(216,181,122,.35);animation:spin 40s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .breath-orb{width:132px;height:132px;border-radius:50%;display:grid;place-items:center;align-content:center;background:radial-gradient(circle at 62% 38%,#fff6e0,#e3c48c 48%,#9a7440 100%);box-shadow:0 0 40px rgba(239,220,180,.35),0 0 90px rgba(239,220,180,.15);color:var(--night);font:500 14px/1.35 var(--sans);animation:idle 5s ease-in-out infinite}
-.breath-orb b{display:block;font-family:var(--serif);font-weight:400;font-size:38px;line-height:1.05}
+.breath-orb b{display:block;font-family:var(--serif);font-weight:500;font-size:38px;line-height:1.05}
 .breath-orb.run{animation:none}
 @keyframes idle{50%{transform:scale(1.08);box-shadow:0 0 60px rgba(239,220,180,.5),0 0 120px rgba(239,220,180,.2)}}
 .breath button{border:0;cursor:pointer}
@@ -278,7 +282,107 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 .js .moons.in figure:nth-child(6) svg{animation-delay:0.80s}
 .js .moons.in figure:nth-child(7) svg{animation-delay:0.96s}
 
+/* ---------- третья волна: анимации-ответы ---------- */
+[hidden]{display:none!important}
+.fx-all{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:80}
+/* слова загораются при прокрутке */
+.js .lit .wd{color:#d6c7cb;transition:color .45s ease}
+.js .lit .wd.on{color:var(--ink)}
+.js .lit.big .wd.on{color:var(--plum)}
+.lit mark{color:inherit;background:linear-gradient(transparent 60%,rgba(216,181,122,.6) 60%) no-repeat 0 0/100% 100%;padding:0 1px}
+.js .lit mark{background-size:0% 100%;transition:background-size 1s var(--ease)}
+.js .lit mark.on{background-size:100% 100%}
+/* замер сил */
+.gauge-sec{padding:0 0 16px}
+.gauge{position:relative;overflow:hidden;border-radius:32px;padding:42px 22px 32px;color:var(--paper);text-align:center;display:grid;grid-template-areas:"q" "moon" "ctrl";justify-items:center;background:radial-gradient(120% 80% at 80% 0%,#4a3150 0%,transparent 60%),radial-gradient(90% 60% at 0% 100%,#3a2236 0%,transparent 65%),linear-gradient(180deg,var(--night),var(--night-2))}
+.g-stars{position:absolute;inset:0;pointer-events:none}
+.g-stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff6e0;opacity:.12;transform:scale(.6);transition:opacity .5s,transform .5s,box-shadow .5s}
+.g-stars i.on{opacity:1;transform:scale(1.15);box-shadow:0 0 8px 1px rgba(255,240,205,.9)}
+.g-q,.g-moon,.g-ctrl{position:relative;z-index:1}
+.g-q{grid-area:q}
+.g-q h2{color:var(--moon);margin-bottom:6px}
+.g-sub{color:#cdbfcf;font-size:15px}
+.g-moon{grid-area:moon;width:150px;height:150px;margin:24px 0 6px}
+.g-halo{position:absolute;inset:-45%;border-radius:50%;background:radial-gradient(circle,rgba(239,220,180,.5),rgba(239,220,180,.12) 40%,transparent 68%);opacity:.4;transform:scale(.9);transition:opacity .35s,transform .35s}
+.g-moon svg{position:relative;width:100%;height:100%;display:block}
+.g-ctrl{grid-area:ctrl;width:100%;max-width:440px}
+.g-num{display:inline-block;font:500 54px/1 var(--serif);color:var(--moon);font-variant-numeric:tabular-nums;transition:transform .2s var(--ease)}
+.g-num small{font:400 16px var(--sans);color:#bfb1c2;margin-left:6px}
+.g-num.pop{transform:scale(1.14)}
+.g-range{--p:30%;-webkit-appearance:none;appearance:none;display:block;width:100%;height:40px;background:transparent;margin:10px 0 0;cursor:pointer}
+.g-range::-webkit-slider-runnable-track{height:6px;border-radius:99px;background:linear-gradient(90deg,#e3c48c var(--p),rgba(239,220,180,.18) var(--p))}
+.g-range::-moz-range-track{height:6px;border-radius:99px;background:rgba(239,220,180,.18)}
+.g-range::-moz-range-progress{height:6px;border-radius:99px;background:#e3c48c}
+.g-range::-webkit-slider-thumb{-webkit-appearance:none;width:32px;height:32px;margin-top:-13px;border-radius:50%;background:radial-gradient(circle at 62% 38%,#fff6e0,#e3c48c 55%,#9a7440);box-shadow:0 0 18px rgba(239,220,180,.85)}
+.g-range::-moz-range-thumb{width:32px;height:32px;border:0;border-radius:50%;background:radial-gradient(circle at 62% 38%,#fff6e0,#e3c48c 55%,#9a7440);box-shadow:0 0 18px rgba(239,220,180,.85)}
+.g-range:focus-visible{outline:2px solid var(--moon);outline-offset:4px;border-radius:8px}
+.g-scale{display:flex;justify-content:space-between;font-size:13px;color:#bfb1c2;margin-top:2px}
+.g-hint{display:none;margin-top:18px;font-size:15px;color:var(--moon);animation:ghint 1.8s ease-in-out infinite}
+.js .g-hint{display:inline-block}
+@keyframes ghint{50%{opacity:.45;transform:translateX(6px)}}
+.g-ans{margin-top:18px;background:rgba(255,255,255,.07);border:1px solid rgba(216,181,122,.32);border-radius:22px;padding:18px 18px 16px;text-align:left;font-size:16px;line-height:1.55;color:#efe6ee;animation:gans .8s var(--ease) both}
+.g-ans b{display:block;font:500 20px/1.3 var(--serif);color:var(--moon);margin-bottom:6px}
+.g-ans .btn{margin-top:16px;width:100%}
+.g-ans small{display:block;margin-top:10px;font-size:13px;color:#bfb1c2;text-align:center}
+@keyframes gans{from{opacity:0;transform:translateY(24px) scale(.96)}}
+/* вопросы как переписка */
+.chat{background:#ece0dc;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -44px rgba(74,44,79,.5)}
+.c-head{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--card);border-bottom:1px solid var(--line)}
+.c-head img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--gold)}
+.c-head b{display:block;font:600 16px/1.2 var(--sans);color:var(--ink)}
+.c-head span{font-size:13.5px;color:var(--ink-soft)}
+.c-msgs{padding:16px 12px;display:flex;flex-direction:column;gap:8px}
+.bub{max-width:88%;padding:10px 14px;border-radius:20px;font-size:16px;line-height:1.5;animation:bubin .5s var(--ease) both}
+.bub.her{align-self:flex-start;background:var(--card);border-bottom-left-radius:6px;color:var(--ink);transform-origin:0 100%}
+.bub.me{align-self:flex-end;background:var(--plum);color:var(--paper);border-bottom-right-radius:6px;transform-origin:100% 100%;animation-name:flyin}
+@keyframes bubin{from{opacity:0;transform:scale(.6)}}
+@keyframes flyin{from{opacity:0;transform:translateY(90px) scale(.85)}}
+.typing{align-self:flex-start;display:flex;align-items:center;gap:8px;background:var(--card);border-radius:20px;border-bottom-left-radius:6px;padding:10px 14px;font-size:13.5px;color:var(--ink-soft);animation:bubin .35s var(--ease) both}
+.typing span{display:flex;gap:4px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--gold-deep);animation:tdot 1s ease-in-out infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes tdot{0%,60%,100%{transform:none;opacity:.35}30%{transform:translateY(-4px);opacity:1}}
+.c-chips{padding:12px 12px 14px;display:flex;flex-wrap:wrap;gap:8px;background:var(--card);border-top:1px solid var(--line)}
+.c-chips .lbl{width:100%;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+.c-chips button{font:500 15px/1.3 var(--sans);color:var(--plum);background:var(--paper);border:1px solid var(--blush-2);border-radius:18px;padding:9px 14px;cursor:pointer;text-align:left;transition:opacity .25s,transform .25s}
+.c-chips button:disabled{opacity:.45;cursor:default}
+.c-chips button.gone{opacity:0;transform:translateY(-20px) scale(.9)}
+.c-chips button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.c-own{padding:0 16px 16px;background:var(--card);font-size:14.5px;color:var(--ink-soft)}
+/* кнопка-новолуние */
+.btn-rose{position:relative;overflow:hidden;isolation:isolate}
+.mi{width:22px;height:22px;flex:none}
+.mi circle{fill:#2c1f35}
+.btn-rose .mi circle{fill:rgba(29,21,36,.45)}
+.mi path{fill:#fff3d9}
+.rip{position:absolute;z-index:-1;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:rgba(255,255,255,.7);pointer-events:none;animation:rip .7s ease-out forwards}
+@keyframes rip{to{transform:scale(16);opacity:0}}
+.btn.nudge{animation:nudge 1.5s ease-in-out 3}
+@keyframes nudge{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(239,214,160,.95),0 0 26px 2px rgba(239,214,160,.55)}14%{transform:scale(1.07)}30%{transform:scale(1)}100%{transform:scale(1);box-shadow:0 0 0 18px rgba(239,214,160,0),0 0 26px 2px rgba(239,214,160,0)}}
+/* касание неба */
+.hero,.final{-webkit-tap-highlight-color:transparent}
+.pstar{position:absolute;width:4px;height:4px;margin:-2px 0 0 -2px;border-radius:50%;background:#fff6e0;box-shadow:0 0 10px 2px rgba(255,240,205,.9);pointer-events:none;z-index:1;animation:bornstar .9s var(--ease) both,tw 3s 1s ease-in-out infinite}
+@keyframes bornstar{from{transform:scale(4);opacity:0}}
+.wave{position:absolute;z-index:3;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;border:1.5px solid rgba(239,220,180,.9);pointer-events:none;animation:wave .9s ease-out forwards}
+@keyframes wave{to{transform:scale(9);opacity:0}}
+.sky-hint{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);white-space:nowrap;font-size:13px;line-height:1.2;color:var(--moon);border:1px solid rgba(216,181,122,.45);border-radius:99px;padding:6px 13px;background:rgba(29,21,36,.55);pointer-events:none;animation:skyp 2s ease-in-out infinite;transition:opacity .5s}
+@keyframes skyp{50%{box-shadow:0 0 0 8px rgba(216,181,122,.12);opacity:.75}}
+.sky-hint.off{opacity:0!important;animation:none}
+/* фото из лунного света */
+.p-ring{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);transform:rotate(-90deg);pointer-events:none;overflow:visible}
+.p-ring circle{fill:none;stroke:var(--gold);stroke-width:.55;stroke-dasharray:308;stroke-dashoffset:0}
+.p-flash{position:absolute;inset:-30%;border-radius:50%;background:radial-gradient(circle,rgba(255,244,214,.95),rgba(239,220,180,.35) 35%,transparent 65%);opacity:0;pointer-events:none;z-index:2}
+.js .portrait img{clip-path:circle(0% at 76% 24%);filter:brightness(1.9) sepia(.5)}
+.js .portrait .p-ring circle{stroke-dashoffset:308}
+.js .portrait.in img{clip-path:circle(100% at 50% 50%);filter:none;transition:clip-path 1.9s .35s var(--ease),filter 2.2s .35s ease-out}
+.js .portrait.in .p-ring circle{stroke-dashoffset:0;transition:stroke-dashoffset 2.1s .5s var(--ease)}
+.js .portrait.in .p-flash{animation:pflash 1.6s .3s ease-out}
+@keyframes pflash{0%{opacity:0;transform:scale(.4)}25%{opacity:1}100%{opacity:0;transform:scale(1.1)}}
+
 @media (min-width:760px){
+  .gauge{grid-template-columns:auto 1fr;grid-template-areas:"moon q" "moon ctrl";column-gap:64px;text-align:left;justify-items:start;align-items:center;padding:56px 64px}
+  .g-moon{width:220px;height:220px;margin:0}
+  .g-ctrl{max-width:460px}
   body{font-size:18px}
   .wrap{padding:0 40px}
   section{padding:110px 0}
@@ -331,13 +435,13 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
           <path d="M100 20A80 80 0 0 1 100 180A74 80 0 0 0 100 20Z" fill="url(#lit)" filter="url(#glow)" opacity=".9" class="cres-glow"/>
           <path d="M100 20A80 80 0 0 1 100 180A74 80 0 0 0 100 20Z" fill="url(#lit)" class="cres"/>
         </svg>
-      </div></div>
+      </div><span class="sky-hint" id="skyHint">коснись неба</span></div>
 
       <div>
         <div class="date-chip load d2"><b>9&nbsp;ноября</b> · новолуние</div>
         <h1><span class="w">Возвращение</span> <span class="w w2">в&nbsp;себя</span><span class="sub">7&nbsp;дней <span class="nw">кундалини-йоги</span></span></h1>
         <p class="promise load d3">Проверь за&nbsp;7&nbsp;дней, останутся&nbsp;ли к&nbsp;вечеру силы на&nbsp;себя и&nbsp;близких</p>
-        <p class="lead load d3">Полчаса практики в&nbsp;день, ничего не&nbsp;отменяя. В&nbsp;первый и&nbsp;седьмой день оцениваешь сон и&nbsp;силы от&nbsp;0 до&nbsp;10, а&nbsp;я&nbsp;всю неделю рядом в&nbsp;чате</p>
+        <p class="lead load d3">Полчаса практики в&nbsp;день, ничего не&nbsp;отменяя. Если практика тебе сейчас не&nbsp;подходит, скажу об&nbsp;этом до&nbsp;оплаты, а&nbsp;в&nbsp;первый и&nbsp;седьмой день ты сама оцениваешь сон и&nbsp;силы от&nbsp;0 до&nbsp;10</p>
         <div class="facts load d3">
           <div><strong>7&nbsp;дней</strong><small>9-15&nbsp;ноября</small></div>
           <div><strong>25-30&nbsp;мин</strong><small>в&nbsp;день</small></div>
@@ -351,7 +455,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       </div>
     </div>
   </div>
-  <svg class="horizon" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60C240 20 480 10 720 34S1200 88 1440 46V90H0Z" fill="#f8f2ec"/></svg>
+  <svg class="horizon" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60C240 20 480 10 720 34S1200 88 1440 46V90H0Z" fill="#f6edeb"/></svg>
 </header>
 
 <main>
@@ -362,10 +466,33 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       <h2>Для кого эта неделя</h2>
     </div>
     <div class="prose measure rv">
-      <p class="big">К&nbsp;вечеру вроде ничего особенного не&nbsp;делала, а&nbsp;сил нет совсем. Ни&nbsp;на&nbsp;себя, ни&nbsp;на&nbsp;близких</p>
-      <p>Весь день тело держит оборону: «надо», «должна», «потом отдохну». За&nbsp;этими чужими голосами свой уже почти не&nbsp;слышно. Стресс оседает в&nbsp;теле: челюсть сжата, плечи подняты к&nbsp;ушам, дыхание короткое, будто всё время чего-то&nbsp;ждёшь. Ложишься и&nbsp;долго не&nbsp;можешь уснуть</p>
+      <p class="big lit">К&nbsp;вечеру вроде ничего особенного не&nbsp;делала, а&nbsp;<mark>сил нет совсем</mark>. Ни&nbsp;на&nbsp;себя, ни&nbsp;на&nbsp;близких</p>
+      <p class="lit">Весь день тело держит оборону: «надо», «должна», «потом отдохну». За&nbsp;этими чужими голосами свой уже почти не&nbsp;слышно. Стресс оседает в&nbsp;теле: челюсть сжата, <mark>плечи подняты к&nbsp;ушам</mark>, дыхание короткое, будто всё время чего-то&nbsp;ждёшь. Ложишься и&nbsp;долго не&nbsp;можешь уснуть</p>
       <p>Ты уже пробовала. Медитации в&nbsp;приложении не&nbsp;идут, в&nbsp;голове много мыслей. Кундалини по&nbsp;видео выходит похожей на&nbsp;утреннюю гимнастику, и&nbsp;непонятно, правильно ли&nbsp;ты делаешь. А&nbsp;ещё пишут, что кундалини опасна, и&nbsp;непонятно, можно ли&nbsp;тебе вообще</p>
       <p class="accent">Эта неделя для тебя, если хочешь проверить на&nbsp;себе, что меняют 25-30&nbsp;минут практики в&nbsp;день: сон, напряжение в&nbsp;теле, силы к&nbsp;вечеру. В&nbsp;первый и&nbsp;седьмой день ты это замеришь</p>
+    </div>
+  </div>
+</section>
+
+<section class="gauge-sec" id="zamer">
+  <div class="wrap">
+    <div class="gauge rv">
+      <div class="g-stars" aria-hidden="true"></div>
+      <div class="g-q">
+        <h2>Сколько у&nbsp;тебя сил к&nbsp;вечеру?</h2>
+        <p class="g-sub">Отметь честно, от&nbsp;0 до&nbsp;10</p>
+      </div>
+      <div class="g-moon" aria-hidden="true"><div class="g-halo" id="gHalo"></div>
+        <svg viewBox="0 0 200 200"><defs><radialGradient id="gDark" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a2b43"/><stop offset="1" stop-color="#17101d"/></radialGradient><linearGradient id="gLit" x1="0" x2="1"><stop offset="0" stop-color="#fff3d9"/><stop offset="1" stop-color="#e3c48c"/></linearGradient><filter id="gGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter></defs>
+          <circle cx="100" cy="100" r="80" fill="url(#gDark)"/><circle cx="100" cy="100" r="80" fill="none" stroke="rgba(239,220,180,.2)"/>
+          <path id="gPathGlow" d="M100 20A80 80 0 0 1 100 180A27.52 80 0 0 0 100 20Z" fill="url(#gLit)" filter="url(#gGlow)" opacity=".85"/><path id="gPath" d="M100 20A80 80 0 0 1 100 180A27.52 80 0 0 0 100 20Z" fill="url(#gLit)"/></svg></div>
+      <div class="g-ctrl">
+        <div class="g-num" id="gNum"><span id="gVal">3</span><small>из&nbsp;10</small></div>
+        <input class="g-range" id="gRange" type="range" min="0" max="10" step="1" value="3" aria-label="Силы к вечеру от 0 до 10">
+        <div class="g-scale"><span>0 · совсем нет</span><span>10 · полно</span></div>
+        <div class="g-hint" id="gHint">двигай ползунок <span aria-hidden="true">→</span></div>
+        <div class="g-ans" id="gAns" aria-live="polite" hidden></div>
+      </div>
     </div>
   </div>
 </section>
@@ -377,7 +504,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       <div>
         <h2>Попробуй прямо сейчас</h2>
         <p>Вдох на&nbsp;четыре счёта, выдох на&nbsp;восемь. Три круга</p>
-        <button class="btn btn-moon" id="breathBtn" type="button">Подышать со&nbsp;мной</button>
+        <button class="btn btn-line" id="breathBtn" type="button">Подышать со&nbsp;мной</button>
       </div>
     </div>
   </div>
@@ -445,7 +572,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 
 <section class="about" id="obo-mne">
   <div class="wrap about-grid">
-    <div class="portrait rv"><img src="ksenia.jpg" alt="Ксения Новосёлова" width="640" height="640" loading="lazy" decoding="async"></div>
+    <div class="portrait rv"><div class="p-flash" aria-hidden="true"></div><svg class="p-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49"/></svg><img src="ksenia.jpg" alt="Ксения Новосёлова" width="640" height="640" loading="lazy" decoding="async"></div>
     <div class="prose measure rv">
       <div class="eyebrow-num">05</div>
       <h2>Обо мне</h2>
@@ -486,7 +613,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
         <li>Посмотрю ответы и&nbsp;напишу тебе в&nbsp;течение дня. Если всё в&nbsp;порядке, пришлю оферту и&nbsp;реквизиты</li>
         <li>Оплачиваешь, и&nbsp;9&nbsp;ноября получаешь доступ к&nbsp;записям и&nbsp;чату</li>
       </ol>
-      <a class="btn btn-plum" href="https://t.me/ksenia_yoginy">Хочу в&nbsp;поток
+      <a class="btn btn-rose" href="https://t.me/ksenia_yoginy">Хочу в&nbsp;поток
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <div class="refund">
         <h3>Если передумаешь</h3>
@@ -503,12 +630,20 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       <h2>Частые вопросы</h2>
     </div>
     <div class="rv">
+      <div class="chat" id="faqChat" hidden>
+        <div class="c-head"><img src="ksenia.jpg" alt="" width="44" height="44" loading="lazy" decoding="async"><div><b>Ксения Новосёлова</b><span>частые вопросы о&nbsp;потоке</span></div></div>
+        <div class="c-msgs" id="cMsgs" aria-live="polite"><div class="bub her">Здесь ответы на&nbsp;частые вопросы. Нажми свой внизу</div></div>
+        <div class="c-chips" id="cChips"><span class="lbl">Нажми вопрос</span></div>
+        <p class="c-own">Не&nbsp;нашла свой вопрос? Напиши мне в&nbsp;Telegram <a href="https://t.me/ksenia_yoginy">@ksenia_yoginy</a></p>
+      </div>
+      <div id="faqList">
       <details><summary>Я&nbsp;никогда не&nbsp;занималась йогой. Мне подойдёт?</summary><p>Да. Первый день самый мягкий, в&nbsp;записи я&nbsp;объясняю, что мы делаем и&nbsp;зачем. В&nbsp;анкете отметишь свой опыт, и&nbsp;я&nbsp;буду это учитывать в&nbsp;чате</p></details>
       <details><summary>У&nbsp;меня мало времени</summary><p>Практика занимает 25-30&nbsp;минут, запись включаешь, когда тебе удобно. Чат можно читать в&nbsp;любой момент дня</p></details>
       <details><summary>Нужна особая одежда?</summary><p>Светлая и&nbsp;свободная, в&nbsp;которой удобно двигаться и&nbsp;дышать, не&nbsp;обязательно белая. Тюрбан не&nbsp;нужен, платок по&nbsp;желанию</p></details>
       <details><summary>А&nbsp;если во&nbsp;время практики станет плохо?</summary><p>Чаще всего то, что поднимается, нормально: слёзы, раздражение, усталость. Тогда делаешь мягче и&nbsp;пишешь в&nbsp;чат. Что делать в&nbsp;остальных случаях, подробно расписано в <a href="https://telegra.ph/Kogda-ostanavlivat-praktiku-10-08">памятке</a>, она будет у&nbsp;тебя до&nbsp;старта</p></details>
       <details><summary>Это лечение?</summary><p>Нет. Это практика: дыхание, движение и&nbsp;медитация. Она не&nbsp;заменяет врача и&nbsp;психотерапевта, и&nbsp;если состояние острое, сначала к&nbsp;врачу</p></details>
       <details><summary>Это религия? Нужно во&nbsp;что-то верить?</summary><p>Нет. Религиозной части в&nbsp;программе нет, мы работаем с&nbsp;дыханием, телом и&nbsp;внутренним состоянием. В&nbsp;практике есть мантры на&nbsp;гурмукхи: слова простые и&nbsp;пришли из&nbsp;сикхской традиции, язык знать не&nbsp;нужно. Мы используем их как звук и&nbsp;вибрацию в&nbsp;теле. Если твоя вера не&nbsp;позволяет петь мантры, не&nbsp;пой, это только твоё решение. Я&nbsp;никого не&nbsp;заставляю</p></details>
+      </div>
     </div>
   </div>
 </section>
@@ -601,6 +736,122 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
     mg.classList.toggle('on',y>h*.6);mpath.setAttribute('d',moonPath(max>0?y/max:0));
     if(!calm&&y<h)mp.style.transform='translate3d(0,'+(y*.22).toFixed(1)+'px,0)'}
   W.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd();
+
+  /* ---------- третья волна: анимации-ответы ---------- */
+  var TG='a.btn[href*="t.me/ksenia_yoginy"]';
+  function moonD(f,c,r){f=Math.max(.03,Math.min(.999,f));var rx=(r*Math.abs(1-2*f)).toFixed(2),sw=f<.5?0:1;return 'M'+c+' '+(c-r)+'A'+r+' '+r+' 0 0 1 '+c+' '+(c+r)+'A'+rx+' '+r+' 0 0 '+sw+' '+c+' '+(c-r)+'Z'}
+
+  /* искры по касанию: один холст поверх страницы, работает только пока летят искры */
+  var FX=(function(){
+    var cv=D.createElement('canvas');cv.className='fx-all';cv.setAttribute('aria-hidden','true');D.body.appendChild(cv);
+    var ctx=cv.getContext('2d'),ps=[],run=false,dpr=Math.min(W.devicePixelRatio||1,2),w=0,h=0;
+    function size(){var nw=W.innerWidth,nh=W.innerHeight;if(nw!==w||nh!==h){w=nw;h=nh;cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}}
+    function fr(){
+      ctx.clearRect(0,0,w,h);
+      for(var i=ps.length-1;i>=0;i--){var p=ps[i];p.vx*=.972;p.vy=p.vy*.972+p.g;p.x+=p.vx;p.y+=p.vy;p.life--;
+        if(p.life<=0){ps.splice(i,1);continue}
+        var a=p.life/p.max,R=p.r*(.55+.45*a)*3.4,g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,R);
+        g.addColorStop(0,'rgba(255,246,222,'+a+')');g.addColorStop(.35,'rgba(240,206,140,'+(a*.75)+')');g.addColorStop(1,'rgba(216,181,122,0)');
+        ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,R,0,6.283);ctx.fill()}
+      if(ps.length)requestAnimationFrame(fr);else{run=false;ctx.clearRect(0,0,w,h)}
+    }
+    return{burst:function(x,y,n,pow,grav){size();
+      for(var i=0;i<n;i++){var an=Math.random()*6.283,sp=pow*(.3+Math.random()*.9),l=45+Math.random()*45|0;
+        ps.push({x:x,y:y,vx:Math.cos(an)*sp,vy:Math.sin(an)*sp-(grav<.04?0:1.1),g:grav,r:1.1+Math.random()*2,life:l,max:l})}
+      if(!run){run=true;requestAnimationFrame(fr)}}};
+  })();
+
+  /* А: слова в «Для кого» загораются по мере прокрутки */
+  function splitW(el){[].slice.call(el.childNodes).forEach(function(n){
+    if(n.nodeType===3){var f=D.createDocumentFragment();n.textContent.split(/([ \t\r\n]+)/).forEach(function(t){if(!t)return;if(/^[ \t\r\n]+$/.test(t))f.appendChild(D.createTextNode(t));else{var s=D.createElement('span');s.className='wd';s.textContent=t;f.appendChild(s)}});n.parentNode.replaceChild(f,n)}
+    else if(n.nodeType===1)splitW(n)})}
+  var litP=[].slice.call(D.querySelectorAll('.lit')).map(function(p){splitW(p);return{el:p,w:[].slice.call(p.querySelectorAll('.wd')),m:[].slice.call(p.querySelectorAll('mark')),k:-1}});
+  function litUpd(){var vh=W.innerHeight;litP.forEach(function(d){
+    var r=d.el.getBoundingClientRect(),s=vh*.88,e=vh*.45,p=(s-r.top)/((s-e)+r.height);p=Math.max(0,Math.min(1,p));var k=Math.round(p*d.w.length);
+    if(k===d.k)return;d.k=k;d.w.forEach(function(x,i){x.classList.toggle('on',i<k)});
+    d.m.forEach(function(m){var ws=m.querySelectorAll('.wd');m.classList.toggle('on',ws[ws.length-1].classList.contains('on'))})})}
+  var litTick=false;
+  W.addEventListener('scroll',function(){if(!litTick){litTick=true;requestAnimationFrame(function(){litTick=false;litUpd()})}},{passive:true});
+  W.addEventListener('resize',litUpd);litUpd();
+
+  /* Г: луна на кнопках «Хочу в поток», искры по нажатию, пульс после паузы */
+  function addMoon(b){if(b.querySelector('.mi'))return;var s=D.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 48 48');s.setAttribute('class','mi');s.setAttribute('aria-hidden','true');s.innerHTML='<circle cx="24" cy="24" r="20"/><path d="'+moonD(.28,24,20)+'"/>';b.insertBefore(s,b.firstChild)}
+  D.querySelectorAll(TG).forEach(addMoon);
+  function fillMoon(p){var t0=performance.now();(function st(now){var k=Math.min(1,(now-t0)/420),e=1-Math.pow(1-k,3);p.setAttribute('d',moonD(.28+.72*e,24,20));if(k<1)requestAnimationFrame(st);else setTimeout(function(){p.setAttribute('d',moonD(.28,24,20))},1400)})(t0)}
+  var lastFire=0;
+  function fire(b,x,y){var now=Date.now();if(now-lastFire<500)return;lastFire=now;
+    var r=b.getBoundingClientRect();if(x==null){x=r.left+r.width/2;y=r.top+r.height/2}
+    var rp=D.createElement('span');rp.className='rip';rp.style.left=(x-r.left)+'px';rp.style.top=(y-r.top)+'px';b.appendChild(rp);setTimeout(function(){rp.remove()},750);
+    FX.burst(r.left+r.width/2,r.top+r.height/2,46,5.5,.05);
+    var mp=b.querySelector('.mi path');if(mp)fillMoon(mp);b.classList.remove('nudge')}
+  D.addEventListener('pointerdown',function(e){var b=e.target.closest&&e.target.closest(TG);if(b)fire(b,e.clientX,e.clientY)},{passive:true});
+  D.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest(TG);if(b)fire(b)});
+  var lastAct=Date.now()+3000,nudged=false;
+  function act(){lastAct=Date.now();nudged=false}
+  ['scroll','pointerdown','keydown','wheel','touchstart'].forEach(function(ev){W.addEventListener(ev,act,{passive:true,capture:true})});
+  function visBtn(){if(st.classList.contains('on')&&st.offsetWidth)return st.querySelector('.btn');
+    var all=D.querySelectorAll(TG),vh=W.innerHeight;for(var i=0;i<all.length;i++){var r=all[i].getBoundingClientRect();if(r.width&&r.top>60&&r.bottom<vh-20)return all[i]}return null}
+  setInterval(function(){if(nudged||busy||D.hidden||Date.now()-lastAct<4000)return;var b=visBtn();if(!b)return;nudged=true;
+    b.classList.remove('nudge');void b.offsetWidth;b.classList.add('nudge');setTimeout(function(){b.classList.remove('nudge')},4600)},500);
+
+  /* Б: замер «сколько сил к вечеру» */
+  (function(){
+    var rg=D.getElementById('gRange');if(!rg)return;
+    var val=D.getElementById('gVal'),num=D.getElementById('gNum'),path=D.getElementById('gPath'),glow=D.getElementById('gPathGlow'),halo=D.getElementById('gHalo'),
+        hint=D.getElementById('gHint'),ans=D.getElementById('gAns'),moon=D.querySelector('.g-moon'),box=D.querySelector('.g-stars'),stars=[],last=+rg.value;
+    for(var i=0;i<30;i++){var e=D.createElement('i');e.style.left=(3+Math.random()*94)+'%';e.style.top=(4+Math.random()*92)+'%';e.style.transitionDelay=(Math.random()*.25)+'s';box.appendChild(e);stars.push(e)}
+    var texts=[
+      'Мало. Так бывает, когда весь день тело держит оборону. Запомни эту цифру: в&nbsp;первый день потока ты поставишь её снова, а&nbsp;на&nbsp;седьмой сравнишь',
+      'Сил хватает на&nbsp;дела, а&nbsp;на&nbsp;себя уже не&nbsp;остаётся? Запомни эту цифру: в&nbsp;первый и&nbsp;седьмой день потока ты сравнишь её сама',
+      'Хорошо, что силы есть. За&nbsp;неделю ты проверишь, что меняет практика именно у&nbsp;тебя: в&nbsp;первый и&nbsp;седьмой день сравнишь сама'];
+    function draw(v){var d=moonD(.04+v/10*.96,100,80);path.setAttribute('d',d);glow.setAttribute('d',d);
+      halo.style.opacity=(.15+v/10*.85).toFixed(2);halo.style.transform='scale('+(.75+v/10*.45).toFixed(2)+')';
+      val.textContent=v;rg.style.setProperty('--p',(v*10)+'%');stars.forEach(function(s,i){s.classList.toggle('on',i<v*3)})}
+    function mc(){var r=moon.getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2,r:r.width/2}}
+    draw(last);
+    rg.addEventListener('input',function(){var v=+rg.value;draw(v);hint.hidden=true;
+      if(v!==last){num.classList.add('pop');setTimeout(function(){num.classList.remove('pop')},180);var c=mc();FX.burst(c.x+c.r*.55,c.y-c.r*.2,4+v,2.2,.03)}
+      last=v});
+    rg.addEventListener('change',function(){var v=+rg.value,t=v<=3?texts[0]:(v<=6?texts[1]:texts[2]);hint.hidden=true;
+      ans.hidden=false;ans.style.animation='none';void ans.offsetWidth;ans.style.animation='';
+      ans.innerHTML='<b>Сегодня у&nbsp;тебя '+v+' из&nbsp;10</b>'+t+'<a class="btn btn-moon" href="https://t.me/ksenia_yoginy">Хочу в&nbsp;поток</a><small>Цифру видишь только ты, она никуда не&nbsp;отправляется</small>';
+      addMoon(ans.querySelector('.btn'));var c=mc();FX.burst(c.x,c.y,26+v*4,5,.06)});
+  })();
+
+  /* В: частые вопросы как переписка */
+  (function(){
+    var chat=D.getElementById('faqChat'),list=D.getElementById('faqList');if(!chat||!list)return;
+    var msgs=D.getElementById('cMsgs'),chips=D.getElementById('cChips'),cbusy=false,left=0;
+    function add(html,cls){var b=D.createElement('div');b.className='bub '+cls;b.innerHTML=html;msgs.appendChild(b);return b}
+    function lock(v){chips.querySelectorAll('button').forEach(function(x){x.disabled=v})}
+    [].slice.call(list.querySelectorAll('details')).forEach(function(d){
+      var q=d.querySelector('summary').textContent,a=d.querySelector('p').innerHTML,b=D.createElement('button');b.type='button';b.textContent=q;chips.appendChild(b);left++;
+      b.addEventListener('click',function(){if(cbusy)return;cbusy=true;b.classList.add('gone');lock(true);
+        setTimeout(function(){b.remove();add(q,'me');
+          setTimeout(function(){var t=D.createElement('div');t.className='typing';t.innerHTML='Ксения печатает <span><i></i><i></i><i></i></span>';msgs.appendChild(t);
+            setTimeout(function(){t.remove();var h=add(a,'her');cbusy=false;lock(false);left--;
+              if(!left)chips.hidden=true;
+              var r=h.getBoundingClientRect();if(r.bottom>W.innerHeight-90)h.scrollIntoView({behavior:'smooth',block:'center'})
+            },Math.min(1900,800+a.length*3))},400)},250)});
+    });
+    chat.hidden=false;list.hidden=true;
+  })();
+
+  /* Д: касание неба на первом экране и в финале */
+  function skyTap(sec,box,hint){var taps=0,mine=[];
+    sec.addEventListener('pointerdown',function(e){if(e.target.closest('a,button,summary,.horizon'))return;
+      var r=sec.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;taps++;FX.burst(e.clientX,e.clientY,44,5,.05);
+      var w=D.createElement('span');w.className='wave';w.style.left=x+'px';w.style.top=y+'px';sec.appendChild(w);setTimeout(function(){w.remove()},950);
+      var s=D.createElement('span');s.className='pstar';s.style.left=x+'px';s.style.top=y+'px';box.appendChild(s);mine.push(s);if(mine.length>30)mine.shift().remove();
+      if(taps%3===0){var sh=D.createElement('span');sh.className='shoot';sh.style.left=x+'px';sh.style.top=y+'px';sh.style.setProperty('--a',(-24-Math.random()*16)+'deg');sec.appendChild(sh);setTimeout(function(){sh.remove()},1500)}
+      if(hint)hint.classList.add('off')},{passive:true})}
+  skyTap(hero,D.querySelector('.hero .stars'),D.getElementById('skyHint'));skyTap(fin,fin,null);
+
+  /* Е: фото проявляется, по кольцу вспыхивают искры */
+  var pt=D.querySelector('.portrait');
+  if(pt&&'IntersectionObserver' in W){var pio=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;pio.disconnect();
+    setTimeout(function(){for(var i=0;i<8;i++)(function(i){setTimeout(function(){var r=pt.getBoundingClientRect(),R=r.width/2+14,a=-Math.PI/2+i/8*6.283;
+      FX.burst(r.left+r.width/2+Math.cos(a)*R,r.top+r.height/2+Math.sin(a)*R,9,2.4,.02)},i*90)})(i)},2300)},{rootMargin:'0px 0px -8% 0px'});pio.observe(pt)}
 })();
 </script>
 </body>
