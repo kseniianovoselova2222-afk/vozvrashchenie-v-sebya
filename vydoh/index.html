@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>8 мелочей, после которых тело перестаёт держать оборону</title>
+<meta name="description" content="Подарок от Ксении Новосёловой: замер до и после, проверка «где держится оборона», готовые связки на 1,5, 3 и 5 минут и 8 мелочей">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8 мелочей, после которых тело перестаёт держать оборону">
+<meta property="og:description" content="Готовые связки на утро, день и вечер. Проверь на себе за полторы минуты">
+<meta property="og:image" content="https://ksenia7chakras.online/og.jpg">
+<link rel="canonical" href="https://ksenia7chakras.online/vydoh/">
+<meta name="theme-color" content="#1d1524">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%231f1626'/%3E%3Cpath d='M24 4A20 20 0 0 1 24 44A13 20 0 0 0 24 4Z' fill='%23e8cf9f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,72,400;0,72,500;1,72,400&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* «Новолуние, вечер»: ночь открывает, закрывает и держит интерактив (замер, связка, трекер, мостик),
+   длинный текст живёт на слоновой кости. Золото только линиями и Луной. Одна тема, цвета заданы явно */
+:root{
+  --night:#1d1524; --night-2:#2c1f35; --night-3:#3d2b45;
+  --moon:#efdcb4; --gold:#d6b77f; --gold-deep:#7a5a2c; --mist:#e6dde3;
+  --ivory:#f4efe8; --ivory-2:#ebe4d9; --line:#ddd3c4; --card:#fbf8f3;
+  --ink:#231b26; --ink-soft:#5b5160; --plum:#4a2c4f;
+  --serif:"Literata", Georgia, "Times New Roman", serif;
+  --sans:"Golos Text", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font:400 17px/1.68 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.16;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{width:100%;max-width:740px;margin:0 auto;padding-inline:20px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+button{font-family:var(--sans)}
+[hidden]{display:none!important}
+
+/* ---------- общие ---------- */
+.band{padding-block:64px}
+.night{background:var(--night);color:var(--mist);position:relative;overflow:hidden}
+.night h2{color:#f6f1e9}
+.night .eyebrow{color:var(--gold)}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+h2{font-size:clamp(1.65rem,4.8vw,2.3rem);margin-bottom:18px;letter-spacing:-.005em}
+.prose{display:grid;gap:14px;max-width:36rem}
+.prose p{font-size:1.04rem}
+.night .prose p{color:rgba(230,221,227,.9)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 1rem var(--sans);text-decoration:none;border-radius:999px;min-height:54px;padding:0 28px;cursor:pointer;border:0;transition:transform .35s var(--ease),box-shadow .35s,background .3s,color .3s}
+.btn svg{width:18px;height:18px}
+.btn-gold{background:linear-gradient(90deg,#f3e2bf,#d6b77f);color:var(--night);box-shadow:0 12px 34px rgba(214,183,127,.22)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(214,183,127,.38)}
+.btn-line{background:transparent;color:var(--moon);border:1.5px solid var(--gold);min-height:48px;padding:0 22px}
+.btn-line:hover{background:rgba(214,183,127,.12)}
+.btn-ink{background:transparent;color:var(--plum);border:1.5px solid var(--plum);min-height:46px;padding:0 20px}
+.btn-ink:hover{background:var(--plum);color:var(--ivory)}
+.hair{height:1px;background:linear-gradient(90deg,transparent,rgba(214,183,127,.5),transparent);border:0}
+
+/* ---------- обложка ---------- */
+.hero{background:radial-gradient(120% 90% at 82% 0%,var(--night-3) 0%,var(--night-2) 40%,var(--night) 78%);padding-block:26px 72px}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative}
+.top{display:flex;justify-content:space-between;gap:12px;font-size:.86rem;color:rgba(230,221,227,.7)}
+.top a{text-decoration:none;border-bottom:1px solid rgba(214,183,127,.45)}
+.hmoon{width:120px;height:120px;margin:44px 0 30px;position:relative}
+.hmoon .halo{position:absolute;inset:-38px;border-radius:50%;background:radial-gradient(circle,rgba(239,220,180,.3),transparent 66%);animation:halo 6s ease-in-out infinite}
+.hmoon svg{position:relative;width:100%;height:100%;animation:rise 1.8s var(--ease) both}
+@keyframes halo{50%{transform:scale(1.16);opacity:.6}}
+@keyframes rise{from{transform:translateY(28px) rotate(-16deg);opacity:0}}
+.gift{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.gift b{font-weight:600;color:var(--night);background:var(--moon);padding:4px 11px 3px;border-radius:999px;letter-spacing:.2em}
+.hero h1{font-size:clamp(2.05rem,6.6vw,3.4rem);color:#f8f3ea;max-width:15ch;letter-spacing:-.01em}
+.hero .lead{margin-top:20px;font-size:1.12rem;color:rgba(230,221,227,.88);max-width:31rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:.88rem;color:var(--gold)}
+.meta span{display:flex;align-items:center;gap:8px}
+.meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.hero .btn{margin-top:30px}
+.horizon{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:64px;display:block}
+
+/* ---------- замер ---------- */
+.scales{display:grid;gap:22px;margin-top:26px}
+.scale{display:grid;gap:8px}
+.scale .sl{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.scale label{font-family:var(--serif);font-size:1.15rem;color:#f6f1e9}
+.scale output{font:500 1.5rem var(--serif);color:var(--moon);font-variant-numeric:tabular-nums;min-width:3ch;text-align:right}
+.scale small{display:flex;justify-content:space-between;gap:12px;font-size:.8rem;color:rgba(230,221,227,.6)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:3px;border-radius:3px;background:linear-gradient(90deg,var(--gold) var(--p,50%),rgba(230,221,227,.2) var(--p,50%))}
+input[type=range]::-moz-range-track{height:3px;border-radius:3px;background:rgba(230,221,227,.2)}
+input[type=range]::-moz-range-progress{height:3px;background:var(--gold)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-10.5px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#fff6e4,var(--moon) 55%,var(--gold));box-shadow:0 0 0 6px rgba(214,183,127,.16)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border:0;border-radius:50%;background:var(--moon);box-shadow:0 0 0 6px rgba(214,183,127,.16)}
+.saved{margin-top:18px;font-size:.86rem;color:rgba(230,221,227,.6)}
+
+/* ---------- проверка тела ---------- */
+.zones{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+.zone{display:grid;gap:4px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;cursor:pointer;color:var(--ink);font:500 .98rem/1.35 var(--sans);transition:border-color .3s,background .3s,transform .35s var(--ease)}
+.zone:hover{transform:translateY(-2px)}
+.zone .tip{display:none;font:400 .88rem/1.45 var(--sans);color:var(--ink-soft)}
+.zone[aria-pressed="true"]{background:#fff;border-color:var(--gold)}
+.zone[aria-pressed="true"] .tip{display:block;animation:fade .5s var(--ease)}
+.zone[aria-pressed="true"] b::before{content:"✓ ";color:var(--gold-deep)}
+.zone b{font-weight:500}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}}
+.verdict{margin-top:18px;font-family:var(--serif);font-size:1.12rem;color:var(--plum);min-height:1.6em}
+
+/* ---------- связка-плеер ---------- */
+.seq{display:grid;gap:0;margin-top:22px;border-top:1px solid rgba(214,183,127,.25)}
+.seq li{list-style:none;display:grid;grid-template-columns:28px 1fr auto;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(214,183,127,.25)}
+.seq .n{font-family:var(--serif);color:var(--gold)}
+.seq .t{color:#f6f1e9}
+.seq .t small{display:block;color:rgba(230,221,227,.65);font-size:.86rem}
+.seq .d{color:var(--moon);font-variant-numeric:tabular-nums;font-size:.92rem}
+.seq-go{margin-top:26px}
+.player{margin-top:26px;border:1px solid rgba(214,183,127,.35);border-radius:24px;padding:26px 20px;display:grid;justify-items:center;text-align:center;gap:14px;background:radial-gradient(90% 80% at 50% 0%,rgba(239,220,180,.08),transparent 70%)}
+.player .pstep{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.player .ptitle{font-family:var(--serif);font-size:1.6rem;color:#f8f3ea}
+.player .ptext{color:rgba(230,221,227,.85);max-width:24rem}
+.ring{width:150px;height:150px;position:relative;display:grid;place-items:center}
+.ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.ring .sec{font:500 2rem var(--serif);color:var(--moon);font-variant-numeric:tabular-nums}
+.porb{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;line-height:1.25;color:var(--night);background:radial-gradient(circle at 38% 34%,#fff6e4,var(--moon) 45%,var(--gold) 100%);transform:scale(.7);transition:transform 4s cubic-bezier(.45,0,.55,1),box-shadow 4s;position:absolute}
+.porb.inhale{transform:scale(1.05);box-shadow:0 0 0 18px rgba(214,183,127,.14)}
+.porb.exhale{transform:scale(.7);transition-duration:8s}
+.after{display:grid;gap:14px;width:100%;max-width:26rem;text-align:left}
+.result{font-family:var(--serif);font-size:1.25rem;color:var(--moon);text-align:center}
+
+/* ---------- восемь мелочей ---------- */
+.list{display:grid;gap:16px;margin-top:10px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 20px;display:grid;gap:12px;transition:transform .7s var(--ease)}
+.item.in{animation:up .9s var(--ease) both}
+@keyframes up{from{transform:translateY(36px)}}
+.ihead{display:grid;grid-template-columns:46px 1fr auto;gap:14px;align-items:center}
+.ihead .ph{width:46px;height:46px}
+.ihead .ph svg{width:100%;height:100%;display:block}
+.ihead .num{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep)}
+.ihead h3{font-size:1.3rem;margin-top:2px}
+.ihead .dur{font-size:.8rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:2px 10px;white-space:nowrap;align-self:start}
+.ibody{display:grid;gap:10px;font-size:1rem}
+.ibody b{font-weight:600;color:var(--plum)}
+.fine{border-top:1px solid var(--line);padding-top:12px;color:var(--ink)}
+.fine b{color:var(--gold-deep)}
+.phr{display:grid;gap:6px;margin-top:8px}
+.phr span{font-family:var(--serif);font-style:italic;color:var(--plum);border-left:2px solid var(--gold);padding-left:12px}
+.breath{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.orb{width:76px;height:76px;border-radius:50%;flex:none;display:grid;place-items:center;text-align:center;font-size:.74rem;line-height:1.25;color:var(--night);background:radial-gradient(circle at 38% 34%,#fff6e4,var(--moon) 45%,var(--gold) 100%);transform:scale(.74);transition:transform 4s cubic-bezier(.45,0,.55,1),box-shadow 4s}
+.orb.inhale{transform:scale(1.06);box-shadow:0 0 0 16px rgba(214,183,127,.16)}
+.orb.exhale{transform:scale(.74);transition-duration:8s}
+
+/* ---------- утро и вечер ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.plan{border:1px solid var(--line);border-radius:22px;padding:22px 20px;background:var(--card)}
+.plan h3{font-size:1.3rem}
+.plan .len{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px}
+.plan ol{list-style:none;display:grid;gap:0;margin-top:12px}
+.plan li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.plan li:last-child{border-bottom:0}
+.plan li span:last-child{color:var(--gold-deep);white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{margin-top:16px;color:var(--ink-soft);font-size:.96rem;max-width:36rem}
+
+/* ---------- почему бросают ---------- */
+.why{display:grid;gap:18px;margin-top:20px;counter-reset:w}
+.why>div{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.why>div::before{counter-increment:w;content:counter(w);font:500 1.6rem/1 var(--serif);color:var(--gold-deep);padding-top:2px}
+.why h3{font-size:1.15rem;margin-bottom:4px}
+.why p{color:var(--ink);font-size:1rem}
+
+/* ---------- трекер ---------- */
+.track-grid{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:center;margin-top:26px}
+.big-moon{width:150px;height:150px;position:relative}
+.big-moon svg{width:100%;height:100%;display:block;filter:drop-shadow(0 0 28px rgba(239,220,180,.22))}
+.big-moon .cnt{position:absolute;left:0;right:0;bottom:-30px;text-align:center;font-size:.9rem;color:var(--moon);font-variant-numeric:tabular-nums}
+.which{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.which button{font:500 .86rem var(--sans);color:var(--mist);background:rgba(230,221,227,.06);border:1px solid rgba(230,221,227,.2);border-radius:999px;padding:7px 12px;cursor:pointer}
+.which button[aria-pressed="true"]{background:var(--moon);color:var(--night);border-color:var(--moon)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.days button{aspect-ratio:1;max-width:100%;border-radius:12px;border:1px solid rgba(230,221,227,.22);background:rgba(230,221,227,.05);color:rgba(230,221,227,.75);font:500 .9rem var(--sans);font-variant-numeric:tabular-nums;cursor:pointer;transition:transform .3s var(--ease),background .3s}
+.days button[aria-pressed="true"]{background:var(--moon);color:var(--night);border-color:var(--moon);animation:pop .45s var(--ease)}
+@keyframes pop{40%{transform:scale(1.18)}}
+.day7{margin-top:30px;border-top:1px solid rgba(214,183,127,.25);padding-top:24px}
+.day7 h3{color:#f6f1e9;font-size:1.3rem}
+.compare{margin-top:14px;font-family:var(--serif);font-size:1.12rem;color:var(--moon);display:grid;gap:4px}
+.wait{margin-top:26px;font-size:.92rem;color:rgba(230,221,227,.65)}
+.small{margin-top:14px;font-size:.84rem;color:rgba(230,221,227,.55)}
+
+/* ---------- безопасность ---------- */
+.safe{border-left:2px solid var(--gold);padding-left:18px}
+.tel{font-weight:600;white-space:nowrap;user-select:all}
+
+/* ---------- мостик ---------- */
+.bridge{background:linear-gradient(170deg,var(--night-2),var(--night))}
+.date{display:inline-block;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--moon);margin-bottom:14px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0 28px}
+.facts div{border:1px solid rgba(214,183,127,.3);border-radius:16px;padding:12px 8px;text-align:center}
+.facts strong{display:block;font-family:var(--serif);font-weight:500;font-size:1.25rem;color:var(--moon);white-space:nowrap}
+.facts small{font-size:.8rem;color:rgba(230,221,227,.7)}
+.bridge .btn-gold{animation:shine 3.4s ease-in-out 1.5s infinite}
+@keyframes shine{0%,100%{box-shadow:0 12px 34px rgba(214,183,127,.22)}50%{box-shadow:0 12px 50px rgba(214,183,127,.55)}}
+
+/* ---------- обо мне, источники ---------- */
+.me{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:center}
+.me img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:1.5px solid var(--gold)}
+.me p{min-width:0}
+.src{display:grid;gap:10px;font-size:.92rem;color:var(--ink-soft);list-style:none}
+.src li{padding-left:18px;position:relative}
+.src li::before{content:"";position:absolute;left:0;top:.66em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.src a{color:var(--plum);overflow-wrap:anywhere}
+footer{background:var(--night);color:rgba(230,221,227,.68);font-size:.84rem;padding-block:36px 46px}
+footer .wrap{display:grid;gap:14px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer a{color:var(--moon)}
+
+@media (max-width:600px){
+  .zones{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+  .track-grid{grid-template-columns:1fr;justify-items:center}
+  .big-moon{margin-bottom:28px}
+  .ihead{grid-template-columns:40px 1fr}
+  .ihead .ph{width:40px;height:40px}
+  .ihead .dur{grid-column:2;justify-self:start}
+  .facts strong{font-size:1.05rem}
+  .me{grid-template-columns:72px 1fr}
+  .me img{width:72px;height:72px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hmoon .halo,.bridge .btn-gold,.item.in{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero night">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="top"><span>Ксения Новосёлова</span><a href="https://ksenia7chakras.online">кундалини-йога онлайн</a></div>
+    <div class="hmoon" aria-hidden="true"><div class="halo"></div>
+      <svg viewBox="0 0 100 100"><defs><radialGradient id="hd" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a2b43"/><stop offset="1" stop-color="#17101d"/></radialGradient><linearGradient id="hl" x1="0" x2="1"><stop offset="0" stop-color="#fff3d9"/><stop offset="1" stop-color="#e3c48c"/></linearGradient></defs>
+        <circle cx="50" cy="50" r="40" fill="url(#hd)"/><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(239,220,180,.2)"/>
+        <path d="M50 10A40 40 0 0 1 50 90A30 40 0 0 0 50 10Z" fill="url(#hl)"/></svg>
+    </div>
+    <div class="gift">Подарок за слово <b>ВЫДОХ</b></div>
+    <h1>8 мелочей, после которых тело перестаёт держать оборону</h1>
+    <p class="lead">Готовые связки на утро, день и вечер. Проверь на себе за полторы минуты и посмотри, как изменятся цифры</p>
+    <div class="meta"><span>читать 10 минут</span><span>делать от 20 секунд</span></div>
+    <a class="btn btn-gold" href="#zamer">Начать с замера
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </div>
+  <svg class="horizon" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44C240 14 480 6 720 24S1200 62 1440 32V64H0Z" fill="#1d1524"/></svg>
+</header>
+
+<main>
+
+<!-- ШАГ 1. ЗАМЕР -->
+<section class="band night" id="zamer" style="padding-top:28px">
+  <div class="wrap">
+    <div class="eyebrow">Шаг 1 · замер</div>
+    <h2>Где ты сейчас</h2>
+    <div class="prose"><p>Оцени честно, от 0 до 10. Цифры видишь только ты, они хранятся в твоём телефоне. Мы вернёмся к ним после связки и через неделю</p></div>
+    <div class="scales">
+      <div class="scale"><div class="sl"><label for="s-ten">Напряжение в теле сейчас</label><output id="o-ten">5</output></div>
+        <input type="range" id="s-ten" min="0" max="10" step="1" value="5"><small><span>0 · тело спокойно</span><span>10 · всё сжато</span></small></div>
+      <div class="scale"><div class="sl"><label for="s-sil">Силы к вечеру</label><output id="o-sil">5</output></div>
+        <input type="range" id="s-sil" min="0" max="10" step="1" value="5"><small><span>0 · сил нет совсем</span><span>10 · хватает на себя и близких</span></small></div>
+      <div class="scale"><div class="sl"><label for="s-son">Сон</label><output id="o-son">5</output></div>
+        <input type="range" id="s-son" min="0" max="10" step="1" value="5"><small><span>0 · сплю плохо</span><span>10 · высыпаюсь</span></small></div>
+    </div>
+    <p class="saved" id="saved">Сдвинь шкалы, цифры запомнятся сами</p>
+  </div>
+</section>
+
+<!-- ШАГ 2. ГДЕ ДЕРЖИТСЯ ОБОРОНА -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Шаг 2 · 30 секунд</div>
+    <h2>Где у тебя держится оборона</h2>
+    <div class="prose"><p>Пройдись по телу прямо сейчас, не меняя позы. Отметь то, что заметила. К каждой отметке появится подсказка, как отпустить это место</p></div>
+    <div class="zones" id="zones">
+      <button type="button" class="zone" id="z-jaw" aria-pressed="false"><b>Челюсть сжата</b><span class="tip">Разомкни зубы, губы оставь сомкнутыми, язык пусть лежит свободно</span></button>
+      <button type="button" class="zone" id="z-sh" aria-pressed="false"><b>Плечи подняты</b><span class="tip">На вдохе подними плечи к ушам ещё выше, на выдохе урони их вниз</span></button>
+      <button type="button" class="zone" id="z-br" aria-pressed="false"><b>Дыхание короткое, в грудь</b><span class="tip">Сделай мелочь №1: выдох длиннее вдоха, три круга</span></button>
+      <button type="button" class="zone" id="z-bel" aria-pressed="false"><b>Живот втянут</b><span class="tip">На выдохе отпусти живот, пусть он станет круглым</span></button>
+      <button type="button" class="zone" id="z-hand" aria-pressed="false"><b>Пальцы сжаты</b><span class="tip">Раскрой ладони и положи их на колени</span></button>
+      <button type="button" class="zone" id="z-brow" aria-pressed="false"><b>Лоб нахмурен</b><span class="tip">Разгладь лоб и брови, будто по ним провели тёплой ладонью</span></button>
+    </div>
+    <p class="verdict" id="verdict"></p>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ -->
+<section class="band" style="padding-top:0">
+  <div class="wrap">
+    <hr class="hair" style="margin-bottom:56px">
+    <div class="eyebrow">Почему так</div>
+    <h2>Почему к вечеру нет сил, даже если ничего особенного не делала</h2>
+    <div class="prose">
+      <p>Когда что-то пугает, тело за долю секунды готовится защищаться: сердце бьётся чаще, дыхание становится коротким, мышцы напрягаются. Это древний механизм, и в опасности он спасает</p>
+      <p>Только тело плохо отличает опасность от обычного дня. Врачи Гарварда пишут, что так же оно реагирует на пробки, давление на работе и трудности в семье. Резкое сообщение в чате, список дел, шум дома, и оборона включается снова</p>
+      <p>Сама она выключается не всегда. Тогда вечером вроде ничего особенного не делала, а сил нет ни на себя, ни на близких</p>
+      <p>Каждая мелочь ниже подаёт телу сигнал, который оно понимает без слов: опасности нет, можно выдохнуть</p>
+    </div>
+  </div>
+</section>
+
+<!-- ШАГ 3. СВЯЗКА -->
+<section class="band night" id="svyazka">
+  <div class="wrap">
+    <div class="eyebrow">Шаг 3 · полторы минуты</div>
+    <h2>Накрыло прямо сейчас</h2>
+    <div class="prose"><p>Четыре мелочи подряд. Экран ведёт сам, тебе остаётся делать</p></div>
+    <ol class="seq" id="seq">
+      <li><span class="n">1</span><span class="t">Назови словом<small>скажи про себя одним словом, что чувствуешь</small></span><span class="d">10 с</span></li>
+      <li><span class="n">2</span><span class="t">Выдох длиннее вдоха<small>вдох на 4, выдох на 8, три круга</small></span><span class="d">36 с</span></li>
+      <li><span class="n">3</span><span class="t">Ладони<small>правая на сердце, левая на живот</small></span><span class="d">20 с</span></li>
+      <li><span class="n">4</span><span class="t">Гудение<small>«м-м-м» на всём выдохе</small></span><span class="d">30 с</span></li>
+    </ol>
+    <button class="btn btn-gold seq-go" id="go" type="button">Пройти со мной</button>
+    <div class="player" id="player" hidden>
+      <div class="pstep" id="pStep">Шаг 1 из 4</div>
+      <div class="ptitle" id="pTitle">Назови словом</div>
+      <div class="ring" id="ring">
+        <svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="68" fill="none" stroke="rgba(230,221,227,.14)" stroke-width="3"/><circle id="arc" cx="75" cy="75" r="68" fill="none" stroke="#d6b77f" stroke-width="3" stroke-linecap="round" stroke-dasharray="427.3" stroke-dashoffset="0"/></svg>
+        <div class="porb" id="pOrb" hidden><span id="pOrbTxt">вдох</span></div>
+        <span class="sec" id="pSec">10</span>
+      </div>
+      <p class="ptext" id="pText">Скажи про себя одно точное слово. Злюсь. Страшно. Обидно. Стыдно</p>
+      <button class="btn btn-line" id="stop" type="button">Остановить</button>
+      <div class="after" id="after" hidden>
+        <div class="scale"><div class="sl"><label for="s-ten2">Напряжение в теле сейчас</label><output id="o-ten2">5</output></div>
+          <input type="range" id="s-ten2" min="0" max="10" step="1" value="5"><small><span>0 · тело спокойно</span><span>10 · всё сжато</span></small></div>
+        <p class="result" id="result">Сдвинь шкалу и сравни с началом</p>
+        <button class="btn btn-line" id="again" type="button">Пройти ещё раз</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ВОСЕМЬ МЕЛОЧЕЙ -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Восемь мелочей</div>
+    <h2>Каждая по отдельности, с тонкостями</h2>
+    <div class="prose" style="margin-bottom:22px"><p>Для привычки на две недели выбери одну. Остальные пусть будут под рукой</p></div>
+    <div class="list" id="list">
+
+      <article class="item" data-n="1" id="m1">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 1</div><h3>Выдох длиннее вдоха</h3></div><span class="dur">меньше минуты</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Вдох на четыре счёта, выдох на восемь. Три круга, больше не надо</p>
+          <p><b>Почему.</b> На вдохе сердце немного ускоряется, на выдохе замедляется, так устроено у всех. Длинный выдох даёт больше времени этой спокойной части</p>
+          <p><b>Где.</b> В лифте, в очереди, перед разговором, которого не хочется</p>
+          <p class="fine"><b>Тонкость.</b> Вдыхай носом, плечи оставь на месте, пусть воздух идёт в живот и рёбра. Если закружилась голова, сделай меньше кругов и дыши как обычно</p>
+          <div class="breath"><div class="orb" id="orb"><span id="orbTxt">вдох 4<br>выдох 8</span></div><button class="btn btn-ink" id="breathBtn" type="button">Подышать со мной</button></div>
+        </div>
+      </article>
+
+      <article class="item" data-n="2" id="m2">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 2</div><h3>Гудение</h3></div><span class="dur">30 секунд</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Закрой рот и промычи «м-м-м» на всём выдохе. Тридцать секунд</p>
+          <p><b>Почему.</b> Звук даёт вибрацию в горле и груди. Там проходит блуждающий нерв, он помогает телу успокоиться и замедляет сердце. В небольшом исследовании 2023 года у людей во время гудения был самый низкий индекс стресса по ритму сердца, ниже, чем даже во сне</p>
+          <p class="fine"><b>Тонкость.</b> Громкость не важна, хватит тихого звука. Положи ладонь на грудь и почувствуй, как она дрожит. Первые десять секунд смешно, потом становится тихо</p>
+        </div>
+      </article>
+
+      <article class="item" data-n="3" id="m3">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 3</div><h3>Свет в первый час</h3></div><span class="dur">2 минуты</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Проснулась, подойди к окну или выйди на балкон. Две минуты побудь на дневном свете, без тёмных очков и без телефона в руках</p>
+          <p><b>Почему.</b> Утренний свет подводит внутренние часы, и вечером спать хочется раньше. Учёные видели это даже пасмурной зимой в Сиэтле: на улице всё равно заметно светлее, чем дома под лампой</p>
+          <p class="fine"><b>Тонкость.</b> Если можно, открой окно или выйди на улицу. На солнце не смотри, просто побудь на свету</p>
+        </div>
+      </article>
+
+      <article class="item" data-n="4" id="m4">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 4</div><h3>Назови словом</h3></div><span class="dur">10 секунд</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Когда накрывает, скажи про себя одно точное слово. Злюсь. Страшно. Обидно. Стыдно</p>
+          <p><b>Почему.</b> В исследовании Калифорнийского университета людям показывали тяжёлые снимки. Когда они называли своё чувство словом, миндалина, часть мозга, которая поднимает тревогу, реагировала слабее</p>
+          <p class="fine"><b>Тонкость.</b> Чем точнее слово, тем лучше. «Обидно» говорит больше, чем «всё плохо». Можно сказать вслух или записать в заметки</p>
+        </div>
+      </article>
+
+      <article class="item" data-n="5" id="m5">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 5</div><h3>В два раза медленнее</h3></div><span class="dur">2 минуты</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Возьми любое бытовое действие: заварить чай, вымыть чашку, застелить кровать. Сделай его вдвое медленнее обычного</p>
+          <p><b>Почему.</b> Это наблюдение из практики, без научных цифр. Тело, которое весь день торопится, всё время немного в тревоге. Одно медленное дело даёт ему передышку посреди дня</p>
+          <p class="fine"><b>Тонкость.</b> Выбери одно и то же дело каждый день, например первый чай. Так не придётся вспоминать</p>
+        </div>
+      </article>
+
+      <article class="item" data-n="6" id="m6">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 6</div><h3>Ладони на сердце и живот</h3></div><span class="dur">20 секунд</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Правую ладонь положи на левую сторону груди, туда, где сердце, левую на живот. Побудь так двадцать секунд, дыши в ладони</p>
+          <p><b>Почему.</b> В исследовании 2021 года людей проводили через стрессовое испытание. У тех, кто перед этим держал ладони так, гормона стресса потом было меньше, чем у тех, кто ничего не делал, как и у тех, кого обнимали</p>
+          <p class="fine"><b>Тонкость.</b> Сделай два-три глубоких вдоха и почувствуй тепло рук и их лёгкий вес. Так и просили делать участников исследования. Особенно нужно в дни, когда обнять некому</p>
+        </div>
+      </article>
+
+      <article class="item" data-n="7" id="m7">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 7</div><h3>Одно «нет» в день</h3></div><span class="dur">1 минута</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Каждый день откажи в чём-то небольшом. Не пойти. Не отвечать сейчас. Не брать на себя ещё одно дело</p>
+          <p><b>Почему.</b> Это тоже из практики. Когда твои границы всё время продавливают, тело держится настороже. Каждое маленькое «нет» показывает, где ты заканчиваешься, и защищаться ему нужно меньше</p>
+          <div class="fine"><b>Тонкость.</b> Начни с того, где отказать проще всего. Три готовые фразы:
+            <div class="phr"><span>Сегодня не смогу, давай в четверг</span><span>Мне нужно подумать, отвечу завтра</span><span>Это я на себя не возьму, могу помочь вот с этим</span></div></div>
+        </div>
+      </article>
+
+      <article class="item" data-n="8" id="m8">
+        <div class="ihead"><div class="ph" aria-hidden="true"></div><div><div class="num">Мелочь 8</div><h3>Последняя минута</h3></div><span class="dur">1 минута</span></div>
+        <div class="ibody">
+          <p><b>Как.</b> Перед сном вспомни один момент дня, где было хорошо. Одну сцену: свет на стене, вкус, чьё-то лицо. Итоги и список дел оставь на завтра</p>
+          <p><b>Почему.</b> В исследовании 2009 года на 400 взрослых у тех, у кого перед сном больше хороших мыслей, сон был дольше, а засыпали они быстрее</p>
+          <p class="fine"><b>Тонкость.</b> Если голова крутит дела, за пять минут до сна запиши их на листок на завтра. В исследовании 2018 года те, кто так делал, засыпали быстрее тех, кто перечислял сделанное за день. Потом вернись к одной хорошей сцене</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- УТРО И ВЕЧЕР -->
+<section class="band" style="padding-top:0">
+  <div class="wrap">
+    <hr class="hair" style="margin-bottom:56px">
+    <div class="eyebrow">Готовые связки</div>
+    <h2>Утро и вечер</h2>
+    <div class="duo">
+      <div class="plan"><div class="len">3 минуты</div><h3>Утро</h3>
+        <ol><li><span>Свет у окна</span><span>2 мин</span></li><li><span>Там же выдох длиннее вдоха</span><span>36 с</span></li><li><span>Выбери одно «нет» на сегодня</span><span>20 с</span></li></ol></div>
+      <div class="plan"><div class="len">около 5 минут</div><h3>Вечер</h3>
+        <ol><li><span>Чай вдвое медленнее</span><span>2 мин</span></li><li><span>Гудение</span><span>30 с</span></li><li><span>Ладони на сердце и живот</span><span>20 с</span></li><li><span>Выдох длиннее вдоха</span><span>36 с</span></li><li><span>В постели последняя минута</span><span>1 мин</span></li></ol></div>
+    </div>
+    <p class="note">Для привычки на две недели выбери одну мелочь. Связки держи под рукой на трудные дни и вечера</p>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ БРОСАЮТ -->
+<section class="band" style="padding-top:0">
+  <div class="wrap">
+    <hr class="hair" style="margin-bottom:56px">
+    <div class="eyebrow">Честно</div>
+    <h2>Почему бросают на третий день</h2>
+    <div class="why">
+      <div><div><h3>Берут все восемь сразу</h3><p>Через три дня это ещё один список «надо». Одна мелочь, две недели</p></div></div>
+      <div><div><h3>Ждут результата с первого раза</h3><p>За один, два, три раза ничего не произойдёт. Сдвиги приходят от повторения</p></div></div>
+      <div><div><h3>Делают, только когда уже совсем плохо</h3><p>Привяжи мелочь к тому, что делаешь каждый день: первый чай, лифт, чистка зубов. В исследовании привычек 2010 года люди так и делали: одно и то же действие после одного и того же дела</p></div></div>
+      <div><div><h3>Пропустила день и решила, что всё пропало</h3><p>В том же исследовании один пропуск почти не мешал привычке складываться. Просто продолжай со следующего дня</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ДВЕ НЕДЕЛИ -->
+<section class="band night" id="dve-nedeli">
+  <div class="wrap">
+    <div class="eyebrow">Две недели</div>
+    <h2>Две недели с одной мелочью</h2>
+    <div class="prose"><p>Выбери мелочь и отмечай день, когда сделала. С каждой отметкой Луна растёт: четырнадцать дней почти ровно проходят путь от новолуния до полнолуния</p></div>
+    <div class="track-grid">
+      <div class="big-moon" aria-hidden="true"><svg viewBox="0 0 100 100" id="bigMoon"></svg><div class="cnt" id="cnt">0 из 14</div></div>
+      <div style="min-width:0">
+        <div class="which" id="which" role="group" aria-label="Какую мелочь ты выбрала"></div>
+        <div class="days" id="days" role="group" aria-label="Отметки по дням"></div>
+      </div>
+    </div>
+    <p class="wait" id="wait">На седьмой отметке здесь откроется второй замер, и мы сравним его с первым</p>
+    <div class="day7" id="day7" hidden>
+      <h3>Замер на седьмой день</h3>
+      <div class="scales">
+        <div class="scale"><div class="sl"><label for="s-sil7">Силы к вечеру</label><output id="o-sil7">5</output></div>
+          <input type="range" id="s-sil7" min="0" max="10" step="1" value="5"><small><span>0 · сил нет совсем</span><span>10 · хватает на себя и близких</span></small></div>
+        <div class="scale"><div class="sl"><label for="s-son7">Сон</label><output id="o-son7">5</output></div>
+          <input type="range" id="s-son7" min="0" max="10" step="1" value="5"><small><span>0 · сплю плохо</span><span>10 · высыпаюсь</span></small></div>
+      </div>
+      <div class="compare" id="compare"></div>
+    </div>
+    <p class="small">Отметки и цифры хранятся только в твоём телефоне</p>
+  </div>
+</section>
+
+<!-- ЕСЛИ ЧТО-ТО НЕ ТАК -->
+<section class="band">
+  <div class="wrap">
+    <div class="safe prose">
+      <div class="eyebrow" style="margin:0">Если что-то не так</div>
+      <p>Все восемь мелочей простые, но тело у всех разное. Если от дыхания закружилась голова, вернись к обычному дыханию. Если стало тяжело на душе, остановись</p>
+      <p>Эти мелочи не лечат и не заменяют врача. Если тяжело долго, обратись к специалисту. Телефон доверия для взрослых: <span class="tel">8-800-333-44-34</span>, звонок бесплатный</p>
+    </div>
+  </div>
+</section>
+
+<!-- МОСТИК -->
+<section class="band night bridge">
+  <div class="wrap">
+    <span class="date">9 ноября · новолуние</span>
+    <h2>То же самое, только глубже</h2>
+    <div class="prose">
+      <p>В гайде ты сделала то, с чего я начинаю с каждой ученицей: замерила, где ты сейчас, попробовала и посмотрела на цифры</p>
+      <p>В потоке «Возвращение в себя. 7 дней» всё так же, только глубже. Каждый день полчаса кундалини-йоги, ничего не отменяя. В первый и седьмой день ты оцениваешь сон и силы от 0 до 10. Все семь дней я в чате: пишешь, что почувствовала, и мы вместе смотрим, что делать дальше</p>
+      <p>До оплаты ты заполняешь анкету, и я скажу, подходит ли тебе практика сейчас</p>
+    </div>
+    <div class="facts">
+      <div><strong>7 дней</strong><small>9-15 ноября</small></div>
+      <div><strong>25-30 мин</strong><small>в день</small></div>
+      <div><strong>2 990 ₽</strong><small>запись до 8.11</small></div>
+    </div>
+    <a class="btn btn-gold" href="https://ksenia7chakras.online">Посмотреть программу
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- ОБО МНЕ -->
+<section class="band">
+  <div class="wrap">
+    <div class="me">
+      <img src="../ksenia.jpg" alt="Ксения Новосёлова" width="96" height="96">
+      <p>Я Ксения Новосёлова, сертифицированный проводник кундалини-йоги. Веду занятия 1 на 1 онлайн и учусь в международной школе кундалини-йоги Амрит Нам Саровар. С каждой ученицей мы начинаем с анкеты безопасности, а практику наращиваем потихоньку</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Материал не является медицинской услугой, лечением или психотерапией и не заменяет консультацию врача</p>
+    <nav>
+      <a href="https://telegra.ph/Politika-obrabotki-personalnyh-dannyh-10-08-2">Политика обработки персональных данных</a>
+      <a href="https://telegra.ph/Kogda-ostanavlivat-praktiku-10-08">Когда останавливать практику</a>
+    </nav>
+    <p>Новосёлова Ксения Сергеевна, самозанятая, ИНН 665207284200, ksyshasysert@mail.ru</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var D=document, RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){return D.getElementById(id)}
+
+  /* неразрывные пробелы после коротких слов */
+  (function(el){var w=D.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n;
+    while((n=w.nextNode())){if(n.parentNode&&/SCRIPT|STYLE/.test(n.parentNode.nodeName))continue;
+      var v=n.nodeValue,prev;do{prev=v;v=v.replace(/(^|[\s«(])([а-яёА-ЯЁ]{1,2}) /g,'$1$2\u00a0');}while(v!==prev);n.nodeValue=v;}
+  })(D.body);
+
+  /* хранилище: только в телефоне читательницы */
+  var KEY='vydoh-v2', S={};
+  try{S=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){S={}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+
+  /* фаза Луны: f от 0 (новолуние) до 1 (полнолуние) */
+  function moonSVG(f,id){
+    var r=40,c=50,k=Math.cos(Math.PI*f),rx=Math.abs(k*r),sweep=k>0?0:1,lit='';
+    if(f>=0.999)lit='<circle cx="50" cy="50" r="40" fill="url(#ml'+id+')"/>';
+    else if(f>0.001)lit='<path d="M'+c+' '+(c-r)+'A'+r+' '+r+' 0 0 1 '+c+' '+(c+r)+'A'+rx.toFixed(2)+' '+r+' 0 0 '+sweep+' '+c+' '+(c-r)+'Z" fill="url(#ml'+id+')"/>';
+    return '<defs><radialGradient id="md'+id+'" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a2b43"/><stop offset="1" stop-color="#17101d"/></radialGradient><linearGradient id="ml'+id+'" x1="0" x2="1"><stop offset="0" stop-color="#fff3d9"/><stop offset="1" stop-color="#e3c48c"/></linearGradient></defs><circle cx="50" cy="50" r="40" fill="url(#md'+id+')"/><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(214,183,127,.4)"/>'+lit;
+  }
+  D.querySelectorAll('.item').forEach(function(it){var n=+it.dataset.n;it.querySelector('.ph').innerHTML='<svg viewBox="0 0 100 100">'+moonSVG(n/8,'i'+n)+'</svg>';});
+
+  /* звёзды на обложке */
+  var cv=$('sky'),cx=cv.getContext('2d'),st=[],W,H,dpr=Math.min(devicePixelRatio||1,2),shoot=null;
+  function size(){W=cv.width=cv.offsetWidth*dpr;H=cv.height=cv.offsetHeight*dpr;st=[];var n=Math.round(W*H/(dpr*dpr*5200));
+    for(var i=0;i<n;i++)st.push({x:Math.random()*W,y:Math.random()*H*.85,r:(Math.random()*1.3+.3)*dpr,a:Math.random()*6,s:Math.random()*.03+.008});}
+  function draw(){cx.clearRect(0,0,W,H);
+    for(var i=0;i<st.length;i++){var s=st[i];s.a+=s.s;cx.globalAlpha=.3+Math.abs(Math.sin(s.a))*.7;cx.fillStyle='#efdcb4';cx.beginPath();cx.arc(s.x,s.y,s.r,0,7);cx.fill();}
+    if(!shoot&&Math.random()<.006)shoot={x:Math.random()*W*.7+W*.2,y:Math.random()*H*.35,l:0};
+    if(shoot){shoot.l+=14*dpr;var x=shoot.x-shoot.l,y=shoot.y+shoot.l*.45,g=cx.createLinearGradient(x,y,x+90*dpr,y-40*dpr);g.addColorStop(0,'rgba(255,243,217,.95)');g.addColorStop(1,'rgba(255,243,217,0)');cx.globalAlpha=1;cx.strokeStyle=g;cx.lineWidth=1.6*dpr;cx.beginPath();cx.moveTo(x,y);cx.lineTo(x+90*dpr,y-40*dpr);cx.stroke();if(shoot.l>W*.5)shoot=null;}
+    cx.globalAlpha=1;if(!RM)requestAnimationFrame(draw);}
+  size();draw();addEventListener('resize',size);
+
+  /* карточки выезжают при прокрутке, видимы и без анимации */
+  if('IntersectionObserver' in window&&!RM){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+    D.querySelectorAll('.item,.plan').forEach(function(it){if(it.getBoundingClientRect().top>innerHeight)io.observe(it);});
+  }
+
+  /* шкалы */
+  function bindScale(id,out,key,cb){var el=$(id),o=$(out);
+    if(key&&S[key]!=null)el.value=S[key];
+    function upd(store){o.textContent=el.value;el.style.setProperty('--p',(el.value*10)+'%');if(store&&key){S[key]=+el.value;save();}cb&&cb(store);}
+    el.addEventListener('input',function(){upd(true)});upd(false);return el;}
+  function savedNote(){ $('saved').textContent=(S.ten!=null||S.sil!=null||S.son!=null)?'Запомнила. Цифры хранятся только в твоём телефоне':'Сдвинь шкалы, цифры запомнятся сами'; }
+  bindScale('s-ten','o-ten','ten',savedNote);bindScale('s-sil','o-sil','sil',savedNote);bindScale('s-son','o-son','son',savedNote);
+
+  /* где держится оборона */
+  var zones=D.querySelectorAll('.zone');
+  function verdict(){var c=0;zones.forEach(function(z){if(z.getAttribute('aria-pressed')==='true')c++});var v=$('verdict');
+    v.textContent=c===0?'':c<3?'Оборона есть, но небольшая. Подойдёт любая мелочь ниже':'Тело сейчас держит оборону. Начни со связки «Накрыло прямо сейчас», она чуть ниже';}
+  zones.forEach(function(z){z.addEventListener('click',function(){z.setAttribute('aria-pressed',z.getAttribute('aria-pressed')==='true'?'false':'true');verdict();})});
+
+  /* дыхание: n кругов 4 и 8 */
+  function breathe(orb,txt,cycles,onStep,onDone){var k=0,alive=true;
+    (function cycle(){if(!alive)return;if(k===cycles){orb.className=orb.className.replace(/ ?(inhale|exhale)/g,'');onDone&&onDone();return;}
+      k++;orb.classList.remove('exhale');orb.classList.add('inhale');txt.innerHTML='вдох<br>'+k+' из '+cycles;onStep&&onStep(k);
+      setTimeout(function(){if(!alive)return;orb.classList.remove('inhale');orb.classList.add('exhale');txt.innerHTML='выдох';setTimeout(cycle,8000);},4000);})();
+    return function(){alive=false;orb.className=orb.className.replace(/ ?(inhale|exhale)/g,'');};}
+  var bb=$('breathBtn'),busy=false;
+  bb.addEventListener('click',function(){if(busy)return;busy=true;bb.textContent='Дышим…';
+    breathe($('orb'),$('orbTxt'),3,null,function(){$('orbTxt').innerHTML='готово';bb.textContent='Ещё раз';busy=false;});});
+
+  /* связка-плеер */
+  var steps=[
+    {t:'Назови словом',x:'Скажи про себя одно точное слово. Злюсь. Страшно. Обидно. Стыдно',s:10},
+    {t:'Выдох длиннее вдоха',x:'Вдох на четыре, выдох на восемь. Следи за шаром',s:36,orb:true},
+    {t:'Ладони',x:'Правая ладонь на сердце, левая на живот. Почувствуй тепло рук',s:20},
+    {t:'Гудение',x:'Закрой рот и промычи «м-м-м» на всём выдохе. Громкость не важна',s:30}];
+  var C=427.3,timer=null,stopB=null,idx=0;
+  function show(el,on){el.hidden=!on}
+  function run(i){idx=i;var st=steps[i];$('pStep').textContent='Шаг '+(i+1)+' из 4';$('pTitle').textContent=st.t;$('pText').textContent=st.x;
+    show($('pOrb'),!!st.orb);show($('pSec'),!st.orb);
+    if(st.orb)stopB=breathe($('pOrb'),$('pOrbTxt'),3);
+    var t0=Date.now(),dur=st.s*1000;clearInterval(timer);
+    timer=setInterval(function(){var left=Math.max(0,dur-(Date.now()-t0));$('pSec').textContent=Math.ceil(left/1000);
+      $('arc').style.strokeDashoffset=(C*(1-left/dur)).toFixed(1);
+      if(left<=0){clearInterval(timer);stopB&&stopB();stopB=null;if(i<3)run(i+1);else finish();}},200);}
+  function finish(){$('pStep').textContent='Готово';$('pTitle').textContent='Как ты сейчас?';$('pText').textContent='Оцени напряжение ещё раз, тем же способом, что в начале';
+    show($('ring'),false);show($('stop'),false);show($('after'),true);compare1();}
+  function start(){show($('go'),false);show($('player'),true);show($('ring'),true);show($('stop'),true);show($('after'),false);$('arc').style.strokeDashoffset=0;run(0);
+    $('player').scrollIntoView({behavior:RM?'auto':'smooth',block:'center'});}
+  $('go').addEventListener('click',start);$('again').addEventListener('click',start);
+  $('stop').addEventListener('click',function(){clearInterval(timer);stopB&&stopB();show($('player'),false);show($('go'),true);});
+  function compare1(){var a=S.ten,b=+$('s-ten2').value,r=$('result');
+    if(a==null){r.textContent='Запомни эту цифру. В следующий трудный момент сравни';return;}
+    if(b<a)r.textContent='Было '+a+', стало '+b+'. Это ты сделала за полторы минуты';
+    else if(b===a)r.textContent='Было '+a+', стало '+b+'. Так бывает в первый раз, попробуй в следующий трудный момент';
+    else r.textContent='Стало выше. Остановись и подыши как обычно. Если так повторяется, связка тебе сейчас не подходит';}
+  bindScale('s-ten2','o-ten2','ten2',function(st){if(st)compare1();});
+
+  /* трекер и замер седьмого дня */
+  var names={1:'Выдох',2:'Гудение',3:'Свет',4:'Слово',5:'Медленнее',6:'Ладони',7:'«Нет»',8:'Минута'};
+  if(!S.m)S.m='1';if(!S.d)S.d=[];
+  var which=$('which'),days=$('days');
+  Object.keys(names).forEach(function(n){var b=D.createElement('button');b.type='button';b.id='w'+n;b.textContent=n+'. '+names[n];b.dataset.n=n;
+    b.addEventListener('click',function(){S.m=n;save();render();});which.appendChild(b);});
+  for(var i=1;i<=14;i++){(function(i){var b=D.createElement('button');b.type='button';b.id='d'+i;b.textContent=i;b.setAttribute('aria-label','День '+i);
+    b.addEventListener('click',function(){var p=S.d.indexOf(i);if(p>-1)S.d.splice(p,1);else S.d.push(i);save();render();});days.appendChild(b);})(i);}
+  function compare7(){var out=[];
+    [['sil','sil7','Силы к вечеру'],['son','son7','Сон']].forEach(function(r){var a=S[r[0]],b=+$('s-'+r[1]).value;
+      out.push(a==null?r[2]+': сейчас '+b:r[2]+': было '+a+', стало '+b);});
+    $('compare').innerHTML=out.map(function(s){return '<span>'+s+'</span>'}).join('');}
+  bindScale('s-sil7','o-sil7','sil7',compare7);bindScale('s-son7','o-son7','son7',compare7);
+  function render(){which.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.n===S.m?'true':'false')});
+    days.querySelectorAll('button').forEach(function(b,i){b.setAttribute('aria-pressed',S.d.indexOf(i+1)>-1?'true':'false')});
+    var c=S.d.length;$('bigMoon').innerHTML=moonSVG(c/14,'big');$('cnt').textContent=c+' из 14';
+    show($('day7'),c>=7);show($('wait'),c<7);if(c>=7)compare7();}
+  render();
+})();
+</script>
+</body>
+</html>
