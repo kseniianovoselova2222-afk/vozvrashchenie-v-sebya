@@ -405,6 +405,22 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
   .moon-big.load,.hero h1 .w,.hero h1 .sub,.load{animation-name:fadeonly}
 }
 @keyframes fadeonly{from{opacity:0}}
+
+/* фаза 6: карточка цифр, блок «Как я работаю» */
+.mini-scales{margin-top:16px;padding-top:14px;border-top:1px dashed var(--blush-2);display:grid;gap:8px}
+.ms-row{display:grid;grid-template-columns:1fr 58px 58px;gap:8px;align-items:center;font-size:15px;color:var(--ink)}
+.ms-head span{font-size:13px;color:var(--ink-soft);text-align:center}
+.ms-row i{display:block;height:30px;border-radius:10px;border:1.5px dashed var(--gold);background:rgba(255,255,255,.65)}
+.card p.ms-note{font-size:14px;color:var(--gold-deep);margin-top:4px}
+.method-name{font-size:17px;color:var(--ink);margin-bottom:14px}
+.method-name b{color:var(--plum);font-weight:600}
+.manifest{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,5.2vw,24px);line-height:1.45;color:var(--plum)}
+.not-box{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.not-box h3{font-size:21px;color:var(--plum);margin-bottom:12px}
+.not-list{list-style:none;display:grid;gap:12px}
+.not-list li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16px;color:var(--ink-soft);align-items:start}
+.not-list li::before{content:"";width:10px;height:10px;margin:8px 0 0 6px;border-radius:50%;border:1.5px solid var(--rose)}
+.price-wrap .refund{margin-top:18px}
 </style>
 </head>
 <body>
@@ -516,7 +532,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
     </div>
     <div class="moons rv" aria-hidden="true"><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A19.55 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>1</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A18.22 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>2</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A16.06 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>3</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A13.18 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>4</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A9.71 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>5</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A5.8 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>6</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A1.63 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>7</figcaption></figure></div>
     <div class="cards">
-      <article class="card rv"><span class="n">i</span><h3>Анкета перед стартом</h3><p>Две минуты, ответы вижу только я. Если практика тебе сейчас не&nbsp;подходит, я&nbsp;скажу об этом до&nbsp;оплаты</p></article>
+      <article class="card rv"><span class="n">i</span><h3>Анкета перед стартом</h3><p>Две минуты. Ответы читаю я&nbsp;сама, больше их никто не&nbsp;видит. Если практика тебе сейчас не&nbsp;подходит, я&nbsp;скажу об этом до&nbsp;оплаты</p></article>
       <article class="card rv"><span class="n">ii</span><h3>Одна практика в&nbsp;день, 25-30&nbsp;минут, в&nbsp;записи</h3><p>Дыхание или крия (связка движений с&nbsp;дыханием) и&nbsp;медитация. Первый день самый мягкий, дальше мы потихоньку наращиваем</p></article>
       <article class="card wide rv"><span class="n">iii</span><h3>Два варианта на&nbsp;выбор</h3>
         <div class="variants">
@@ -526,7 +542,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
         <p style="margin-top:12px">Дни устроены одинаково, цели разные</p></article>
       <article class="card rv"><span class="n">iv</span><h3>В&nbsp;каждой записи я&nbsp;объясняю, что происходит с&nbsp;телом, почему и&nbsp;что может подняться</h3></article>
       <article class="card rv"><span class="n">v</span><h3>Общий чат все 7&nbsp;дней</h3><p>Пишешь, что почувствовала и&nbsp;что непонятно, отвечаю я&nbsp;сама, каждый день. Рядом другие участницы, неделю мы проходим вместе</p></article>
-      <article class="card rv"><span class="n">vi</span><h3>Замер в&nbsp;первый и&nbsp;седьмой день</h3><p>Сон, тревога, напряжение в&nbsp;теле, силы к&nbsp;вечеру, по&nbsp;шкале от&nbsp;0&nbsp;до&nbsp;10. Сможешь сравнить себя в&nbsp;начале и&nbsp;в&nbsp;конце недели</p></article>
+      <article class="card rv"><span class="n">vi</span><h3>Замер в&nbsp;первый и&nbsp;седьмой день</h3><p>Сон, тревога, напряжение в&nbsp;теле, силы к&nbsp;вечеру, по&nbsp;шкале от&nbsp;0&nbsp;до&nbsp;10. Сможешь сравнить себя в&nbsp;начале и&nbsp;в&nbsp;конце недели</p><div class="mini-scales" role="img" aria-label="Так выглядят твои ответы: четыре строки, день 1 и день 7"><div class="ms-row ms-head"><span></span><span>день 1</span><span>день 7</span></div><div class="ms-row"><span>Сон</span><i></i><i></i></div><div class="ms-row"><span>Тревога</span><i></i><i></i></div><div class="ms-row"><span>Напряжение в&nbsp;теле</span><i></i><i></i></div><div class="ms-row"><span>Силы к&nbsp;вечеру</span><i></i><i></i></div><p class="ms-note">Цифры будут твои</p></div></article>
       <article class="card rv"><span class="n">vii</span><h3>Памятка «<a href="https://telegra.ph/Kogda-ostanavlivat-praktiku-10-08">Когда останавливать практику</a>»</h3><p>Остаётся у&nbsp;тебя и&nbsp;после потока</p></article>
     </div>
   </div>
@@ -540,7 +556,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
     </div>
     <div class="prose measure rv">
       <p>Это первый поток, поэтому отзывов о&nbsp;нём пока нет. Расскажу, что вижу у&nbsp;учениц, с&nbsp;которыми занимаюсь 1&nbsp;на&nbsp;1. Первые сдвиги у&nbsp;всех разные. У&nbsp;кого-то сон становится немного спокойнее, кто-то впервые за&nbsp;долгое время замечает, что плечи опустились. В&nbsp;ладонях и&nbsp;спине может появиться тепло или покалывание. Бывает, выходят эмоции, которые долго копились, а&nbsp;потом становится легче</p>
-      <div class="honest"><p>За&nbsp;неделю жизнь не&nbsp;перевернётся. У&nbsp;моих учениц 1&nbsp;на&nbsp;1 результат складывается из&nbsp;встреч 2-3&nbsp;раза в&nbsp;неделю и&nbsp;10-15&nbsp;минут своей практики каждый день. За&nbsp;7&nbsp;дней ты поймёшь, как практика работает на&nbsp;тебе, и&nbsp;сама решишь, хочешь ли&nbsp;идти дальше</p></div>
+      <div class="honest"><p>За&nbsp;неделю жизнь не&nbsp;перевернётся. У&nbsp;моих учениц 1&nbsp;на&nbsp;1 результат складывается из&nbsp;встреч 2-3&nbsp;раза в&nbsp;неделю и&nbsp;10-15&nbsp;минут своей практики каждый день. За&nbsp;7&nbsp;дней ты поймёшь, как практика работает на&nbsp;тебе, и&nbsp;сама решишь, хочешь ли&nbsp;идти дальше. В&nbsp;последний день расскажу, как можно продолжить. Выбирать будешь по&nbsp;своим цифрам</p></div>
     </div>
   </div>
 </section>
@@ -563,7 +579,28 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
         <li>психиатрический диагноз в&nbsp;стадии обострения или госпитализация в&nbsp;психиатрический стационар за&nbsp;последний год</li>
         <li>мысли о&nbsp;самоповреждении сейчас</li>
       </ul>
-      <p class="after">Если что-то&nbsp;из&nbsp;списка про тебя, напиши мне, подскажу, что можно вместо этой программы. Если бывают панические атаки, тоже напиши до&nbsp;оплаты, вместе решим, как заниматься безопасно</p>
+      <p class="after">Если что-то&nbsp;из&nbsp;списка про тебя, напиши мне, подскажу, что можно вместо этой программы. Если бывают панические атаки, тоже напиши до&nbsp;оплаты, вместе решим, как тебе заниматься</p>
+    </div>
+  </div>
+</section>
+
+<section id="kak-rabotayu">
+  <div class="wrap split">
+    <div class="rv">
+      <div class="eyebrow-num">05</div>
+      <h2>Как я&nbsp;работаю</h2>
+    </div>
+    <div class="rv">
+      <p class="method-name">Я&nbsp;веду по&nbsp;своему методу <b>«Возвращение в&nbsp;себя»</b></p>
+      <p class="manifest">Мы за&nbsp;практику, которую можно проверить на&nbsp;себе. До&nbsp;оплаты я&nbsp;смотрю твою анкету и&nbsp;говорю, подходит ли тебе практика, а&nbsp;в&nbsp;первый и&nbsp;седьмой день ты сама оцениваешь сон и&nbsp;силы от&nbsp;0&nbsp;до&nbsp;10. Мы за&nbsp;полчаса в&nbsp;день, ничего не&nbsp;отменяя: потихоньку, каждый день и&nbsp;вместе в&nbsp;чате. Мы против обещаний на&nbsp;слово и&nbsp;против спешки. Таймеров и&nbsp;«только сегодня» не&nbsp;будет, цена и&nbsp;условия возврата написаны прямо, и&nbsp;решаешь ты&nbsp;сама</p>
+      <div class="not-box">
+        <h3>Чего не&nbsp;будет</h3>
+        <ul class="not-list">
+          <li>Раскапывать детство и&nbsp;род не&nbsp;будем. Каждый день начинаем с&nbsp;тела: дыхание или крия и&nbsp;медитация</li>
+          <li>Оплату не&nbsp;возьму, пока не&nbsp;прочитаю анкету</li>
+          <li>Твоя анкета не&nbsp;попадёт в&nbsp;общий чат. В&nbsp;чат пишешь только то, что сама захочешь</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -572,7 +609,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
   <div class="wrap about-grid">
     <div class="portrait rv"><div class="p-flash" aria-hidden="true"></div><svg class="p-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49"/></svg><img src="ksenia.jpg" alt="Ксения Новосёлова" width="640" height="640" loading="lazy" decoding="async"></div>
     <div class="prose measure rv">
-      <div class="eyebrow-num">05</div>
+      <div class="eyebrow-num">06</div>
       <h2>Обо мне</h2>
       <p>Я&nbsp;Ксения Новосёлова, сертифицированный проводник <span class="nw">кундалини-йоги</span>, обучение проходила у&nbsp;Юлии Чай. В&nbsp;кундалини около двух лет, пришла в&nbsp;неё через садхану, ежедневную практику. Я&nbsp;тоже долго жила так, как от&nbsp;меня ждали, и&nbsp;не&nbsp;замечала этого. Веду занятия 1&nbsp;на&nbsp;1&nbsp;онлайн и&nbsp;сейчас учусь в&nbsp;международной школе <span class="nw">кундалини-йоги</span> Амрит Нам Саровар</p>
       <p>Ко&nbsp;мне часто приходят те, кто уже пробовал заниматься по&nbsp;видео и&nbsp;бросил, потому что некому было подсказать. Я&nbsp;долго думала, как сделать короткий формат и&nbsp;не&nbsp;оставить человека одного с&nbsp;записью. Поэтому все семь дней я&nbsp;в&nbsp;чате: пишешь, что почувствовала, и&nbsp;мы вместе смотрим, что делать дальше</p>
@@ -583,11 +620,12 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 <section id="uchastie">
   <div class="wrap split">
     <div class="rv">
-      <div class="eyebrow-num">06</div>
+      <div class="eyebrow-num">07</div>
       <h2>Даты и&nbsp;участие</h2>
     </div>
+    <div class="price-wrap">
     <div class="price-card rv">
-      <div class="price"><span class="pnum">2&nbsp;990&nbsp;₽</span><small>за&nbsp;всю неделю. Оплата переводом на&nbsp;карту, чек самозанятой приходит из&nbsp;«Мой налог»</small></div>
+      <div class="price"><span class="pnum">2&nbsp;990&nbsp;₽</span><small>за&nbsp;всю неделю, это около 430&nbsp;₽ в&nbsp;день вместе с&nbsp;чатом. Оплата переводом на&nbsp;карту, чек самозанятой приходит из&nbsp;«Мой налог»</small></div>
       <ul class="dates">
         <li>Запись до&nbsp;8&nbsp;ноября</li>
         <li>Старт 9&nbsp;ноября, в&nbsp;новолуние. Поток идёт с&nbsp;9&nbsp;по&nbsp;15&nbsp;ноября</li>
@@ -595,13 +633,18 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
         <li>Никаких таймеров и&nbsp;«только сегодня», решаешь спокойно</li>
       </ul>
     </div>
+      <div class="refund rv">
+        <h3>Если передумаешь</h3>
+        <p>Передумала до&nbsp;старта или в&nbsp;первые три дня потока, верну всё. С&nbsp;12&nbsp;ноября верну за&nbsp;дни, которые ещё не&nbsp;начались. Если противопоказание выяснилось после оплаты, верну полностью в&nbsp;любой день. Подробно в <a href="https://telegra.ph/Publichnaya-oferta-programma-Vozvrashchenie-v-sebya-7-dnej-10-08">оферте</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="zapis" style="padding-top:0">
   <div class="wrap split">
     <div class="rv">
-      <div class="eyebrow-num">07</div>
+      <div class="eyebrow-num">08</div>
       <h2>Как записаться</h2>
     </div>
     <div class="rv">
@@ -613,10 +656,6 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       </ol>
       <a class="btn btn-rose" href="https://t.me/ksenia_yoginy">Хочу в&nbsp;поток
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <div class="refund">
-        <h3>Если передумаешь</h3>
-        <p>Передумала до&nbsp;старта, верну всё. После старта верну за&nbsp;дни, которые ещё не&nbsp;начались. Если противопоказание выяснилось уже после оплаты, верну полностью в&nbsp;любой день потока. Подробно в <a href="https://telegra.ph/Publichnaya-oferta-programma-Vozvrashchenie-v-sebya-7-dnej-10-08">оферте</a></p>
-      </div>
     </div>
   </div>
 </section>
@@ -624,7 +663,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 <section class="faq" id="voprosy" style="padding-top:0">
   <div class="wrap split">
     <div class="rv">
-      <div class="eyebrow-num">08</div>
+      <div class="eyebrow-num">09</div>
       <h2>Частые вопросы</h2>
     </div>
     <div class="rv">
