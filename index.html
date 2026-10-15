@@ -107,6 +107,24 @@ h2{font-size:clamp(30px,7.6vw,46px);margin-bottom:24px;color:var(--ink)}
 .variant.energy{background:linear-gradient(135deg,#f6e3c4,#f0d2b4)}
 .variant.calm{background:linear-gradient(135deg,#e5dcea,#dccfe3)}
 
+/* план проверки (фаза 9) */
+.plan{background:linear-gradient(160deg,var(--night) 0%,var(--night-3) 100%);color:var(--paper);border-radius:calc(var(--r) + 8px);padding:28px 22px 8px;margin:0 0 40px;position:relative;overflow:hidden}
+.plan::before{content:"";position:absolute;width:260px;height:260px;left:-90px;bottom:-120px;border-radius:50%;background:radial-gradient(circle,rgba(239,220,180,.14),transparent 65%);pointer-events:none}
+.plan-h{font-family:var(--serif);font-weight:400;font-size:clamp(24px,6vw,30px);line-height:1.25;color:var(--moon);margin-bottom:10px}
+.plan-sub{color:#cdbfcf;font-size:16px;margin-bottom:26px;max-width:640px}
+.plan-steps{list-style:none;display:grid;gap:0;position:relative}
+.plan-steps li{position:relative;display:grid;grid-template-columns:40px 1fr;align-content:start;gap:14px;padding:0 0 22px}
+.plan-steps li:not(:last-child)::after{content:"";position:absolute;left:19.5px;top:46px;bottom:6px;width:1px;background:linear-gradient(rgba(216,181,122,.6),rgba(216,181,122,.08))}
+.plan-steps svg{width:40px;height:40px;display:block}
+.plan-steps b{display:block;font-weight:600;font-size:17px;line-height:1.35;color:var(--moon);margin:2px 0 6px}
+.plan-steps span{display:block;font-size:15.5px;line-height:1.55;color:#e6dbe4}
+.not-for{margin-top:26px;padding:18px 20px;border-radius:18px;background:var(--card);border:1px solid var(--line);font-size:16px;color:var(--ink-soft)}
+.not-for b{display:block;color:var(--plum);font-weight:600;margin-bottom:8px}
+.not-for ul{list-style:none;display:grid;gap:6px;margin-bottom:10px}
+.not-for li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.not-for li::before{content:"☾";color:var(--gold-deep);font-size:14px;line-height:1.7}
+.not-for a{color:var(--plum);text-underline-offset:3px}
+
 /* ученицы */
 .dawn{background:linear-gradient(180deg,var(--paper) 0%,var(--blush) 100%)}
 .honest{margin-top:28px;background:rgba(255,255,255,.55);border-radius:var(--r);padding:22px;border:1px solid rgba(255,255,255,.7)}
@@ -378,6 +396,10 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
 @keyframes pflash{0%{opacity:0;transform:scale(.4)}25%{opacity:1}100%{opacity:0;transform:scale(1.1)}}
 
 @media (min-width:760px){
+  .plan{padding:38px 38px 16px}
+  .plan-steps{grid-template-columns:repeat(4,1fr);gap:24px}
+  .plan-steps li{grid-template-columns:1fr;gap:10px}
+  .plan-steps li:not(:last-child)::after{left:52px;right:-16px;top:20px;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,rgba(216,181,122,.6),rgba(216,181,122,.08))}
   .gauge{grid-template-columns:auto 1fr;grid-template-areas:"moon q" "moon ctrl";column-gap:64px;text-align:left;justify-items:start;align-items:center;padding:56px 64px}
   .g-moon{width:220px;height:220px;margin:0}
   .g-ctrl{max-width:460px}
@@ -484,6 +506,15 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       <p class="lit">Весь день тело держит оборону: «надо», «должна», «потом отдохну». За&nbsp;этими чужими голосами свой уже почти не&nbsp;слышно. Стресс оседает в&nbsp;теле: челюсть сжата, <mark>плечи подняты к&nbsp;ушам</mark>, дыхание короткое, будто всё время чего-то&nbsp;ждёшь. Ложишься и&nbsp;долго не&nbsp;можешь уснуть</p>
       <p>Ты уже пробовала. Медитации в&nbsp;приложении не&nbsp;идут, в&nbsp;голове много мыслей. Кундалини по&nbsp;видео выходит похожей на&nbsp;утреннюю гимнастику, и&nbsp;непонятно, правильно ли&nbsp;ты делаешь. А&nbsp;ещё пишут, что кундалини опасна, и&nbsp;непонятно, можно ли&nbsp;тебе вообще</p>
       <p class="accent">Эта неделя для тебя, если хочешь проверить на&nbsp;себе, что меняют 25-30&nbsp;минут практики в&nbsp;день: сон, напряжение в&nbsp;теле, силы к&nbsp;вечеру. В&nbsp;первый и&nbsp;седьмой день ты это замеришь</p>
+      <div class="not-for">
+        <b>Кому сейчас не&nbsp;подойдёт</b>
+        <ul>
+          <li>если ждёшь, что неделя заменит врача или психотерапевта</li>
+          <li>если хочешь разбирать детство и&nbsp;род</li>
+          <li><span>если есть противопоказание из&nbsp;<a href="#bezopasnost">списка на&nbsp;странице</a></span></li>
+        </ul>
+        <p><a href="https://t.me/ksenia_fokus">Напиши мне</a>, подскажу, что можно вместо</p>
+      </div>
     </div>
   </div>
 </section>
@@ -530,6 +561,16 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       <div class="eyebrow-num">02</div>
       <h2>Как устроены 7&nbsp;дней</h2>
     </div>
+    <div class="plan rv">
+      <h3 class="plan-h">Как пройдёт твоя проверка</h3>
+      <p class="plan-sub">По&nbsp;методу «Возвращение в&nbsp;себя»: сначала я&nbsp;смотрю твою анкету, потом ты сама сравниваешь свои цифры первого и&nbsp;седьмого дня</p>
+      <ol class="plan-steps">
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#2c1f35" stroke="rgba(239,220,180,.55)"/></svg><div><b>Узнаёшь, можно&nbsp;ли тебе</b><span>Две минуты на&nbsp;анкету. Я&nbsp;читаю её сама и&nbsp;до&nbsp;оплаты говорю, подходит&nbsp;ли тебе практика</span></div></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#2c1f35" stroke="rgba(239,220,180,.55)"/><path d="M20 3A17 17 0 0 1 20 37A11 17 0 0 0 20 3Z" fill="#efdcb4"/></svg><div><b>Отмечаешь, как ты сейчас</b><span>Утром 9&nbsp;ноября ставишь себе от&nbsp;0 до&nbsp;10 сон, тревогу, напряжение в&nbsp;теле и&nbsp;силы к&nbsp;вечеру</span></div></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#2c1f35" stroke="rgba(239,220,180,.55)"/><path d="M20 3A17 17 0 0 1 20 37A9 17 0 0 1 20 3Z" fill="#efdcb4"/></svg><div><b>Практикуешь по&nbsp;полчаса семь дней</b><span>Одна запись в&nbsp;день, в&nbsp;своё время, ничего не&nbsp;отменяя. Я&nbsp;рядом в&nbsp;чате и&nbsp;отвечаю сама</span></div></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#efdcb4" stroke="rgba(239,220,180,.55)"/></svg><div><b>Сравниваешь себя в&nbsp;начале и&nbsp;в&nbsp;конце</b><span>В&nbsp;седьмой день те&nbsp;же четыре вопроса. Цифры встают рядом, и&nbsp;ты сама видишь, что изменилось, а&nbsp;что нет</span></div></li>
+      </ol>
+    </div>
     <div class="moons rv" aria-hidden="true"><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A19.55 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>1</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A18.22 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>2</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A16.06 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>3</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A13.18 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>4</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A9.71 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>5</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A5.8 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>6</figcaption></figure><figure><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e9dde3" stroke="#d9c6cf"/><path d="M24 4A20 20 0 0 1 24 44A1.63 20 0 0 0 24 4Z" fill="#d8b57a"/></svg><figcaption>7</figcaption></figure></div>
     <div class="cards">
       <article class="card rv"><span class="n">i</span><h3>Анкета перед стартом</h3><p>Две минуты. Ответы читаю я&nbsp;сама, больше их никто не&nbsp;видит. Если практика тебе сейчас не&nbsp;подходит, я&nbsp;скажу об этом до&nbsp;оплаты</p></article>
@@ -539,7 +580,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
           <div class="variant energy"><b>«На&nbsp;энергию»</b>когда сил нет и&nbsp;всё делается через силу</div>
           <div class="variant calm"><b>«На&nbsp;покой»</b>когда тревожно, много мыслей и&nbsp;сложно расслабиться</div>
         </div>
-        <p style="margin-top:12px">Дни устроены одинаково, цели разные</p></article>
+        <p style="margin-top:12px">Дни устроены одинаково, цели разные. Вариант «на&nbsp;покой» можно делать и&nbsp;вечером перед сном</p></article>
       <article class="card rv"><span class="n">iv</span><h3>В&nbsp;каждой записи я&nbsp;объясняю, что происходит с&nbsp;телом, почему и&nbsp;что может подняться</h3></article>
       <article class="card rv"><span class="n">v</span><h3>Общий чат все 7&nbsp;дней</h3><p>Пишешь, что почувствовала и&nbsp;что непонятно, отвечаю я&nbsp;сама, каждый день. Рядом другие участницы, неделю мы проходим вместе</p></article>
       <article class="card rv"><span class="n">vi</span><h3>Замер в&nbsp;первый и&nbsp;седьмой день</h3><p>Сон, тревога, напряжение в&nbsp;теле, силы к&nbsp;вечеру, по&nbsp;шкале от&nbsp;0&nbsp;до&nbsp;10. Сможешь сравнить себя в&nbsp;начале и&nbsp;в&nbsp;конце недели</p><div class="mini-scales" role="img" aria-label="Так выглядят твои ответы: четыре строки, день 1 и день 7"><div class="ms-row ms-head"><span></span><span>день 1</span><span>день 7</span></div><div class="ms-row"><span>Сон</span><i></i><i></i></div><div class="ms-row"><span>Тревога</span><i></i><i></i></div><div class="ms-row"><span>Напряжение в&nbsp;теле</span><i></i><i></i></div><div class="ms-row"><span>Силы к&nbsp;вечеру</span><i></i><i></i></div><p class="ms-note">Цифры будут твои</p></div></article>
@@ -630,6 +671,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
         <li>Запись до&nbsp;8&nbsp;ноября</li>
         <li>Старт 9&nbsp;ноября, в&nbsp;новолуние. Поток идёт с&nbsp;9&nbsp;по&nbsp;15&nbsp;ноября</li>
         <li>Записи и&nbsp;чат открываются в&nbsp;день старта. Практику делаешь в&nbsp;своё время, лучше в&nbsp;одно и&nbsp;то&nbsp;же&nbsp;каждый день</li>
+        <li>Записи остаются у&nbsp;тебя 30&nbsp;дней после потока, до&nbsp;15&nbsp;декабря</li>
         <li>Никаких таймеров и&nbsp;«только сегодня», решаешь спокойно</li>
       </ul>
     </div>
@@ -675,7 +717,7 @@ footer nav a{color:#d9cbd9;text-underline-offset:3px}
       </div>
       <div id="faqList">
       <details><summary>Я&nbsp;никогда не&nbsp;занималась йогой. Мне подойдёт?</summary><p>Да. Первый день самый мягкий, в&nbsp;записи я&nbsp;объясняю, что мы делаем и&nbsp;зачем. В&nbsp;анкете отметишь свой опыт, и&nbsp;я&nbsp;буду это учитывать в&nbsp;чате</p></details>
-      <details><summary>У&nbsp;меня мало времени</summary><p>Практика занимает 25-30&nbsp;минут, запись включаешь, когда тебе удобно. Чат можно читать в&nbsp;любой момент дня</p></details>
+      <details><summary>У&nbsp;меня мало времени</summary><p>Практика занимает 25-30&nbsp;минут, запись включаешь, когда тебе удобно. Чат можно читать в&nbsp;любой момент дня. Если день совсем тяжёлый, включи запись сразу с&nbsp;медитации, на&nbsp;странице записей есть кнопка «трудный день»</p></details>
       <details><summary>Нужна особая одежда?</summary><p>Светлая и&nbsp;свободная, в&nbsp;которой удобно двигаться и&nbsp;дышать, не&nbsp;обязательно белая. Тюрбан не&nbsp;нужен, платок по&nbsp;желанию</p></details>
       <details><summary>А&nbsp;если во&nbsp;время практики станет плохо?</summary><p>Чаще всего то, что поднимается, нормально: слёзы, раздражение, усталость. Тогда делаешь мягче и&nbsp;пишешь в&nbsp;чат. Что делать в&nbsp;остальных случаях, подробно расписано в <a href="https://telegra.ph/Kogda-ostanavlivat-praktiku-10-08">памятке</a>, она будет у&nbsp;тебя до&nbsp;старта</p></details>
       <details><summary>Это лечение?</summary><p>Нет. Это практика: дыхание, движение и&nbsp;медитация. Она не&nbsp;заменяет врача и&nbsp;психотерапевта, и&nbsp;если состояние острое, сначала к&nbsp;врачу</p></details>
