@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Число дара · Ксения Новосёлова</title>
+<meta name="description" content="Узнай свой дар по году рождения: в чём твоя сила, где ловушка и что с этим делать">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://kseniianovoselova2222-afk.github.io/vozvrashchenie-v-sebya/dar/">
+<meta name="theme-color" content="#1d140f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Число дара">
+<meta property="og:description" content="Узнай свой дар по году рождения: в чём твоя сила, где ловушка и что с этим делать">
+<meta property="og:image" content="https://ksenia7chakras.online/dar/1/01.jpg">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--bg:#1d140f;--line:rgba(232,220,200,.16);--fg:#efe6d8;--muted:#bfa78b;--accent:#a85936;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;line-height:1.5}
+.wrap{max-width:620px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:30px 18px;display:grid;gap:10px}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font-weight:400;font-size:34px;line-height:1.15;color:#f6efe4}
+.lead{margin:0;color:var(--muted);font-style:italic}
+.btn{display:block;text-align:center;text-decoration:none;padding:15px 18px;border-radius:40px;border:1.5px solid var(--muted);color:var(--fg);
+ font-size:16px;letter-spacing:.18em;text-transform:uppercase;background:none;font-family:inherit;cursor:pointer;width:100%}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#f6efe4}
+.btn:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.pages{display:grid;gap:10px;padding-block:8px 26px}
+.pages img{display:block;width:100%;height:auto;aspect-ratio:4/5;background:#2a1e17}
+.cta{border-top:1px solid var(--line);padding-block:26px 34px;display:grid;gap:14px}
+.cta h2{margin:0;font-weight:400;font-size:28px;line-height:1.2;color:#f6efe4}
+.cta p{margin:0;color:#d9cbb8}
+.calc{display:grid;gap:12px;padding-block:10px 30px}
+.calc label{color:var(--muted);font-size:17px}
+.calc input{font:inherit;font-size:26px;padding:12px 16px;border-radius:12px;border:1.5px solid var(--line);background:#2a1e17;color:var(--fg);width:100%}
+#res{display:grid;gap:12px;min-height:1px}
+#res .num{font-size:96px;line-height:1;color:#e8d3b4}
+#res .nm{font-size:30px;color:#f6efe4}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:15px;padding-block:24px 40px}
+footer .wrap{display:grid;gap:10px}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 16px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="eb">Ксения Новосёлова · кундалини-йога</div>
+  <h1>Число дара</h1>
+  <p class="lead">Две последние цифры года рождения. Сложи их, а если вышло больше 11, сложи ещё раз. 10 и 11 оставляем</p>
+</header>
+<main class="wrap">
+  <form class="calc" id="f">
+    <label for="y">Год рождения</label>
+    <input id="y" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="1987" autocomplete="off">
+    <button class="btn main" type="submit">Узнать мой дар</button>
+  </form>
+  <div id="res" aria-live="polite"></div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Материал для самопознания и практики кундалини-йоги. Не является медицинской услугой, лечением или психотерапией и не заменяет консультацию врача</p>
+    <nav>
+      <a href="https://telegra.ph/Politika-obrabotki-personalnyh-dannyh-10-08-2">Политика обработки персональных данных</a>
+      <a href="https://telegra.ph/Kogda-ostanavlivat-praktiku-10-08">Когда останавливать практику</a>
+    </nav>
+    <p>Новосёлова Ксения Сергеевна, самозанятая, ИНН 665207284200, ksyshasysert@mail.ru</p>
+  </div>
+</footer>
+<script>
+var N={"1": "Создавать", "2": "Слышать", "3": "Вдохновлять", "4": "Прояснять", "5": "Учить", "6": "Выравнивать", "7": "Присутствовать", "8": "Давать силы", "9": "Доводить", "10": "Вести", "11": "Видеть дальше"};
+function red(n){while(n>11){n=String(n).split('').reduce(function(a,c){return a+(+c)},0)}return n}
+var f=document.getElementById('f'),r=document.getElementById('res');
+f.addEventListener('submit',function(ev){ev.preventDefault();
+ var y=+document.getElementById('y').value,yy=y%100;
+ if(!(y>=1930&&y<=2025)){r.innerHTML='<p>Напиши год четырьмя цифрами, например 1987</p>';return}
+ if(yy===0){r.innerHTML='<p>У 2000 года две последние цифры дают ноль. Как читать ноль в позиции дара, в традиции я не нашла, поэтому дар по году не считаю. Остальные четыре числа даты считаются как обычно</p><a class="btn main" href="https://ksenia7chakras.online/karta/?from=dar2000">Посчитать мои пять чисел</a>';return}
+ var a=Math.floor(yy/10),b=yy%10,s=a+b,d=red(yy);
+ r.innerHTML='<div class="num">'+d+'</div><div class="nm">'+N[d]+'</div><p>'+y+': '+a+' + '+b+' = '+s+(s>11?', дальше '+String(s).split('').join(' + ')+' = '+d:'')+'</p><a class="btn main" href="'+d+'/">Открыть мой разбор</a>';
+});
+</script>
+</body>
+</html>

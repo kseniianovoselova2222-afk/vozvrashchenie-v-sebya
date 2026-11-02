@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Число имени · Ксения Новосёлова</title>
+<meta name="description" content="Посчитай число своего имени и узнай, что этот звук в тебе усиливает и какая мантра его уравновешивает">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://kseniianovoselova2222-afk.github.io/vozvrashchenie-v-sebya/imya/">
+<meta name="theme-color" content="#ede9e0">
+<meta property="og:title" content="Число имени">
+<meta property="og:description" content="Что звук твоего имени усиливает, где у него ловушка и какая мантра его уравновешивает">
+<meta property="og:image" content="https://ksenia7chakras.online/imya/1/01.jpg">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--bg:#ede9e0;--line:rgba(90,74,60,.2);--fg:#3a3129;--muted:#8a7766;--accent:#a07d58;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;line-height:1.5;font-weight:500}
+.wrap{max-width:620px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:30px 18px;display:grid;gap:10px;text-align:center}
+.eb{font-size:12px;letter-spacing:.18em;white-space:nowrap;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font-weight:400;text-transform:uppercase;letter-spacing:.12em;font-size:28px;line-height:1.2}
+.lead{margin:0;color:var(--muted);font-style:italic}
+.btn{display:block;text-align:center;text-decoration:none;padding:15px 18px;border:1.5px solid var(--accent);color:#5e4f42;font-size:17px;letter-spacing:.16em;text-transform:uppercase}
+.btn.main{background:#5e4f42;border-color:#5e4f42;color:#f3efe7}
+.btn:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.pages{display:grid;gap:10px;padding-block:8px 26px}
+.pages img{display:block;width:100%;height:auto;aspect-ratio:4/5;background:#e3ddd2}
+.cta{border-top:1px solid var(--line);padding-block:26px 34px;display:grid;gap:14px;text-align:center}
+.cta h2{margin:0;font-weight:400;text-transform:uppercase;letter-spacing:.12em;font-size:23px;line-height:1.25}
+.cta p{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:15px;padding-block:24px 40px}
+footer .wrap{display:grid;gap:10px}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 16px}
+footer a{color:var(--muted)}
+
+[hidden]{display:none!important}
+form{display:flex;gap:8px;margin:6px 0 4px}
+input{flex:1;min-width:0;font:inherit;font-size:20px;padding:12px 14px;border:1.5px solid var(--accent);background:#f6f3ec;color:var(--fg);border-radius:0}
+input:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+form .btn{padding:12px 16px}
+.res{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin:18px 0;display:grid;gap:10px;text-align:center}
+.res[hidden]{display:none}
+.res .sum{color:var(--muted);font-size:18px;word-break:break-word}
+.res .big{font-size:76px;line-height:1;color:var(--accent);font-weight:400}
+.res h2{margin:0;font-weight:400;text-transform:uppercase;letter-spacing:.12em;font-size:24px}
+.res p{margin:0}
+.tb{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin:8px 0 18px}
+.tb div{padding:10px 4px;border-bottom:1px solid var(--line);letter-spacing:.12em;text-align:center;font-size:18px}
+.tb b{font-weight:400;color:var(--accent);margin-right:6px;letter-spacing:0}
+.list{display:grid;gap:0;border-top:1px solid var(--line);margin-bottom:26px}
+.list a{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--fg);text-decoration:none}
+.list a b{font-weight:400;color:var(--accent);width:22px;flex:0 0 22px;text-align:center}
+.note{color:var(--muted);font-style:italic;font-size:17px;margin:0 0 14px}
+h3{font-weight:400;text-transform:uppercase;letter-spacing:.16em;font-size:15px;color:var(--muted);margin:22px 0 8px;text-align:center}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="eb">Ксения Новосёлова · кундалини-йога</div>
+  <h1>Число имени</h1>
+  <p class="lead">Впиши имя, которым тебя зовут каждый день. Оно считается прямо в телефоне и никуда не отправляется</p>
+</header>
+<main class="wrap">
+  <form id="f" autocomplete="off">
+    <input id="nm" name="nm" type="text" inputmode="text" placeholder="Например, Мария" aria-label="Имя" maxlength="40">
+    <button class="btn main" type="submit">Посчитать</button>
+  </form>
+  <p class="note">Если в имени есть ё, пиши ё: Алёна и Алена дают разные числа</p>
+  <section class="res" id="r" hidden aria-live="polite">
+    <div class="sum" id="sum"></div>
+    <div class="big" id="num"></div>
+    <h2 id="nmh"></h2>
+    <p id="st"></p>
+    <p class="note" id="tr"></p>
+    <a class="btn main" id="go" href="#">Открыть разбор числа</a>
+  </section>
+  <h3>Таблица букв</h3>
+  <div class="tb"><div><b>1</b>А И С Ъ</div><div><b>2</b>Б Й Т Ы</div><div><b>3</b>В К У Ь</div><div><b>4</b>Г Л Ф Э</div><div><b>5</b>Д М Х Ю</div><div><b>6</b>Е Н Ц Я</div><div><b>7</b>Ё О Ч</div><div><b>8</b>Ж П Ш</div><div><b>9</b>З Р Щ</div></div>
+  <p class="note">Сложи все буквы имени и сведи сумму к одной цифре. Мария: 5 + 1 + 9 + 1 + 6 = 22, дальше 2 + 2 = 4</p>
+  <h3>Девять звуков</h3>
+  <div class="list"><a href="1/"><b>1</b><span>Воля</span></a><a href="2/"><b>2</b><span>Чуткость</span></a><a href="3/"><b>3</b><span>Свет</span></a><a href="4/"><b>4</b><span>Основа</span></a><a href="5/"><b>5</b><span>Движение</span></a><a href="6/"><b>6</b><span>Забота</span></a><a href="7/"><b>7</b><span>Глубина</span></a><a href="8/"><b>8</b><span>Сила</span></a><a href="9/"><b>9</b><span>Отдача</span></a></div>
+</main>
+<script>
+const T={};["АИСЪ", "БЙТЫ", "ВКУЬ", "ГЛФЭ", "ДМХЮ", "ЕНЦЯ", "ЁОЧ", "ЖПШ", "ЗРЩ"].forEach((s,i)=>[...s].forEach(c=>T[c]=i+1));
+const D={"1": ["Воля", "Ты начинаешь первой и не ждёшь разрешения", "Не умеешь просить и тянешь всё одна"], "2": ["Чуткость", "Считываешь человека раньше, чем он открыл рот", "Растворяешься в нём"], "3": ["Свет", "С тобой легко, ты оживляешь любое место", "Рассеиваешься и бросаешь на середине"], "4": ["Основа", "На тебе всё держится, ты доводишь до конца", "В контроле и страхе ошибиться"], "5": ["Движение", "Быстро меняешься и не боишься нового", "Срываешься раньше результата"], "6": ["Забота", "Рядом с тобой тепло, тебе доверяют важное", "Берёшь чужое и забываешь себя"], "7": ["Глубина", "Видишь суть и не терпишь поверхностного", "Уходишь в голову и закрываешься"], "8": ["Сила", "Держишь объём, который других пугает", "Меришь себя результатами"], "9": ["Отдача", "Видишь целое и много отдаёшь", "Спасаешь всех и обнуляешься сама"]};
+document.getElementById('f').addEventListener('submit',ev=>{
+  ev.preventDefault();
+  const v=document.getElementById('nm').value.toUpperCase(), r=document.getElementById('r');
+  const ps=[...v].filter(c=>T[c]).map(c=>[c,T[c]]);
+  if(!ps.length){r.hidden=false;document.getElementById('sum').textContent='Напиши имя русскими буквами';
+    ['num','nmh','st','tr'].forEach(i=>document.getElementById(i).textContent='');document.getElementById('go').hidden=true;return}
+  let s=ps.reduce((a,p)=>a+p[1],0), line=ps.map(p=>p[0]+' '+p[1]).join(' + ')+' = '+s;
+  while(s>9){const d=[...String(s)].map(Number);s=d.reduce((a,b)=>a+b,0);line+=', дальше '+d.join(' + ')+' = '+s}
+  const k=D[s];
+  document.getElementById('sum').textContent=line;
+  document.getElementById('num').textContent=s;
+  document.getElementById('nmh').textContent=k[0];
+  document.getElementById('st').textContent=k[1];
+  document.getElementById('tr').textContent='Ловушка: '+k[2].toLowerCase();
+  const g=document.getElementById('go');g.hidden=false;g.href=s+'/';g.textContent='Открыть разбор числа '+s;
+  r.hidden=false;
+});
+</script>
+<footer>
+  <div class="wrap">
+    <p>Материал для самопознания и практики кундалини-йоги. Не является медицинской услугой, лечением или психотерапией и не заменяет консультацию врача</p>
+    <p>Новосёлова Ксения Сергеевна, самозанятая, ИНН 665207284200, ksyshasysert@mail.ru</p>
+  </div>
+</footer>
+</body>
+</html>
