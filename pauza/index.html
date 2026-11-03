@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Страница временно не открывается · Ксения Новосёлова</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1e1712">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+:root{--bg:#1e1712;--card:#271e18;--line:rgba(236,226,214,.18);--fg:#efe6db;--muted:#bba893;--accent:#d7b98f;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Golos Text",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.5}
+.wrap{max-width:620px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:34px 10px;display:grid;gap:12px}
+.eb{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font-weight:400;text-transform:uppercase;letter-spacing:.1em;font-size:24px;line-height:1.25}
+.box{border:1.5px solid var(--accent);border-radius:14px;padding:18px;display:grid;gap:12px;margin-block:14px 22px;background:var(--card)}
+.box p,main p{margin:0}
+.muted{color:var(--muted);font-size:15px}
+.btn{display:block;text-align:center;text-decoration:none;padding:15px 18px;border-radius:12px;border:1.5px solid var(--accent);color:var(--accent);font-size:16px}
+.btn.main{background:var(--accent);color:#1e1712;font-weight:600}
+.btn:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.free{border-top:1px solid var(--line);padding-block:24px 40px;display:grid;gap:12px}
+h2{margin:0;font-weight:400;text-transform:uppercase;letter-spacing:.1em;font-size:20px;line-height:1.25}
+footer{border-top:1px solid var(--line);color:rgba(230,221,214,.6);font-size:13px;padding-block:22px 40px}
+</style>
+</head>
+<body>
+<header class="wrap">
+<div class="eb">Ксения Новосёлова · кундалини-йога</div>
+<h1 id="h">Эта страница сейчас не открывается</h1>
+</header>
+<main class="wrap">
+<div class="box">
+<p>Со 2 ноября в России большой сбой у хостинга Beget, на котором стоит мой сайт. О нём пишут в новостях, и от меня это, к сожалению, не зависит</p>
+<p id="what">Поэтому сейчас не открываются расчёт пяти чисел, полная карта и гайд по мантрам, купить их пока нельзя</p>
+<p class="muted">Хостинг ещё не назвал срок. Как только сайт заработает, эти же кнопки снова откроют нужную страницу, а я напишу об этом в Telegram-канале ☺️</p>
+</div>
+<a class="btn main" href="https://t.me/ksenia7chakras">Telegram-канал</a>
+<section class="free">
+<h2>А бесплатное работает</h2>
+<p class="muted">Эти страницы открываются, их можно пройти уже сейчас</p>
+<a class="btn" href="../sorok/">Са Та На Ма: мантра на 40 дней</a>
+<a class="btn" href="../shakti/">Ади Шакти: мантра женской силы</a>
+<a class="btn" href="../sudba/">Число судьбы</a>
+<a class="btn" href="../dar/">Число дара</a>
+<a class="btn" href="../imya/">Число имени</a>
+<a class="btn" href="../chislo/">Число души</a>
+</section>
+</main>
+<footer><div class="wrap">Ксения Новосёлова · кундалини-йога</div></footer>
+<script>
+(function(){var t=(location.search.match(/[?&]t=(\w+)/)||[])[1],w=document.getElementById('what');
+if(t==='karta')w.textContent='Поэтому сейчас не открываются расчёт пяти чисел и полная карта, купить карту пока нельзя';
+if(t==='mantry')w.textContent='Поэтому сейчас не открывается гайд по мантрам, купить его пока нельзя';})();
+</script>
+</body>
+</html>
