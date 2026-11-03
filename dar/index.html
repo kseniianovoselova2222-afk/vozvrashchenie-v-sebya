@@ -74,7 +74,7 @@ var f=document.getElementById('f'),r=document.getElementById('res');
 f.addEventListener('submit',function(ev){ev.preventDefault();
  var y=+document.getElementById('y').value,yy=y%100;
  if(!(y>=1930&&y<=2025)){r.innerHTML='<p>Напиши год четырьмя цифрами, например 1987</p>';return}
- if(yy===0){r.innerHTML='<p>У 2000 года две последние цифры дают ноль. Как читать ноль в позиции дара, в традиции я не нашла, поэтому дар по году не считаю. Остальные четыре числа даты считаются как обычно</p><a class="btn main" href="https://ksenia7chakras.online/karta/?from=dar2000">Посчитать мои пять чисел</a>';return}
+ if(yy===0){r.innerHTML='<p>У 2000 года две последние цифры дают ноль. Как читать ноль в позиции дара, в традиции я не нашла, поэтому дар по году не считаю. Остальные четыре числа даты считаются как обычно</p><a class="btn main" href="https://kseniianovoselova2222-afk.github.io/vozvrashchenie-v-sebya/pauza/?t=karta&from=dar2000">Посчитать мои пять чисел</a>';return}
  var a=Math.floor(yy/10),b=yy%10,s=a+b,d=red(yy);
  r.innerHTML='<div class="num">'+d+'</div><div class="nm">'+N[d]+'</div><p>'+y+': '+a+' + '+b+' = '+s+(s>11?', дальше '+String(s).split('').join(' + ')+' = '+d:'')+'</p><a class="btn main" href="'+d+'/">Открыть мой разбор</a>';
 });
