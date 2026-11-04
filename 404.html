@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ксения Новосёлова</title>
+<script>
+(function () {
+  var p = location.pathname;
+  var to = /^\/(karta|mantry)(\/|$)/.test(p) ? "/pauza/" : "/";
+  location.replace(to);
+})();
+</script>
+<style>
+:root{--bg:#1e1712;--fg:#efe6db;--muted:#bba893;--accent:#d7b98f;color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Golos Text",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.5}
+.wrap{max-width:620px;margin:0 auto;padding:40px 16px;text-align:center}
+a{color:var(--accent)}
+p{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p>Открываю страницу</p>
+<p><a href="/">Перейти на главную</a></p>
+</div>
+</body>
+</html>
