@@ -295,6 +295,9 @@ body::after{display:none}
 .cover.c1 em{font-size:24px}
 }
 .foot .legal a[href^="mailto:"]{padding:11px 0;margin:-11px 0}
+.group-card .zan{display:block;margin:0 0 22px;border-bottom:1px solid var(--line)}
+.group-card .zan li>div{display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid var(--line)}
+.group-card .zan span{font-size:15.5px}
 </style>
 </head>
 <body class="t1">
@@ -372,6 +375,12 @@ body::after{display:none}
 <section id="gruppa" class="group">
   <h2 class="rv">Группой онлайн</h2>
   <div class="group-card rv"><p><span class="nw">Онлайн-встречи</span> и&nbsp;практики в&nbsp;группе. Когда назначаю встречу, в&nbsp;бот приходит анонс: тема, дата и&nbsp;как подключиться. Туда же&nbsp;пишу о&nbsp;групповых <span class="nw">какао-церемониях</span> в&nbsp;Москве</p>
+  <ul class="gifts zan">
+    <li><div><b>БЕСПЛАТНОЕ ЗАНЯТИЕ</b><span>Дата скоро. Первое занятие перенесено, новую дату пришлю в&nbsp;бот за&nbsp;2&nbsp;дня</span></div></li>
+    <li data-until="2026-12-01T09:00:00+03:00"><a href="/zanyatie/bh/"><b>ВТ&nbsp;1 ДЕКАБРЯ, 10:00 МСК&nbsp;· 990&nbsp;₽</b><span>День Бхайравы. Работаем со&nbsp;страхом перед будущим: деньги, работа, близкие, вечное «а&nbsp;вдруг». Полтора часа</span><u>Подробнее и&nbsp;запись</u></a></li>
+    <li><a href="/blagodaryu/"><b>ПО&nbsp;ЖЕЛАНИЮ</b><span>Бесплатное занятие остаётся бесплатным. Если после него захочется сказать спасибо деньгами, выбери сумму, которая тебе по&nbsp;силам</span><u>Поблагодарить за&nbsp;занятие</u></a></li>
+  </ul>
+  <script>document.querySelectorAll('[data-until]').forEach(function(e){if(Date.now()>Date.parse(e.getAttribute('data-until')))e.remove()})</script>
   <a class="cta" href="https://t.me/ksenia7chakras_bot?start=vstrechi-sayt">Получать расписание встреч</a></div>
 </section>
 
@@ -389,6 +398,11 @@ body::after{display:none}
     <li class="rv"><a href="/oborona/"><b>ОБОРОНА</b><span>Тест «Насколько твоё тело держит оборону». Двенадцать вопросов про&nbsp;последнюю неделю, две&nbsp;минуты</span><u>Пройти тест</u></a></li>
     <li class="rv"><a href="/tishina/"><b>ТИШИНА</b><span>Десять минут тишины перед сном. Экран ведёт сам, подсказки появляются по&nbsp;ходу</span><u>Начать вечер</u></a></li>
     <li class="rv"><a href="/sorok/"><b>40 ДНЕЙ</b><span>Мантра Са&nbsp;Та&nbsp;На&nbsp;Ма: слова, поза и&nbsp;руки на&nbsp;фото, шаги и&nbsp;как держать сорок&nbsp;дней</span><u>Открыть мантру</u></a></li>
+    <li class="rv"><a href="/spina/"><b>СПИНА</b><span>Серия для&nbsp;позвоночника целиком: 10&nbsp;шагов по&nbsp;порядку, позы на&nbsp;фото и&nbsp;замер до&nbsp;и&nbsp;после</span><u>Открыть серию</u></a></li>
+    <li class="rv"><a href="/aura/"><b>8 ЧАКР</b><span>Медитация, которая за&nbsp;3&nbsp;минуты проходит все восемь чакр, и&nbsp;карта: где каждая и&nbsp;за&nbsp;что отвечает</span><u>Открыть медитацию</u></a></li>
+    <li class="rv"><a href="/zashchita/"><b>ЗАЩИТА</b><span>Медитация защиты энергополя перед трудными встречами и&nbsp;тест: какое из&nbsp;пяти тел у&nbsp;тебя тоньше</span><u>Открыть медитацию</u></a></li>
+    <li class="rv"><a href="/shakti/"><b>ШАКТИ</b><span>Мантра Ади Шакти: слова и&nbsp;перевод, поза и&nbsp;руки на&nbsp;фото, шаги и&nbsp;замер до&nbsp;и&nbsp;после</span><u>Открыть мантру</u></a></li>
+    <li class="rv"><a href="/pamyat/"><b>ПАМЯТЬ</b><span>Са&nbsp;Та&nbsp;На&nbsp;Ма&nbsp;для&nbsp;ясной головы: что о&nbsp;ней нашли учёные, слова, поза и&nbsp;руки на&nbsp;фото, шаги</span><u>Открыть мантру</u></a></li>
   </ul>
   <div class="breath rv"><button type="button" class="breath-btn" aria-label="Подышать со мной"><span class="orb"></span><span class="b-txt">Подышать со&nbsp;мной</span></button><small>Вдох на&nbsp;четыре счёта, выдох на&nbsp;восемь. Три круга</small></div>
   <a class="tg tg-free rv" href="https://t.me/ksenia7chakras"><span class="nw">Telegram-канал</span> с&nbsp;практиками →</a>
